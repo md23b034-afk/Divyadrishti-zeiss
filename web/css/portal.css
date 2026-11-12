@@ -1,0 +1,56 @@
+body.portal { font-size: 15px; }
+.portal .top nav .chip { cursor: pointer; }
+.portal .top nav .chip.on { background: var(--accent); color: #fff; }
+.layout { display: grid; grid-template-columns: minmax(300px, 380px) 1fr; gap: 0; min-height: calc(100vh - 52px); }
+.list { border-right: 1px solid var(--line); background: var(--card); padding: 12px; overflow-y: auto; max-height: calc(100vh - 52px); position: sticky; top: 52px; }
+.filters { margin-bottom: 8px; }
+.inline { display: inline-flex; align-items: center; gap: 4px; margin: 0 0 0 4px; font-size: .85rem; }
+.inline input { width: auto; margin: 0; }
+#cases { list-style: none; margin: 0; padding: 0; }
+.crow { display: grid; grid-template-columns: 6px 1fr auto; gap: 10px; padding: 10px 8px; border-radius: 10px; cursor: pointer; border: 1px solid transparent; }
+.crow:hover { background: var(--bg); }
+.crow.sel { border-color: var(--teal); background: var(--teal-soft); }
+.crow .bar { border-radius: 4px; }
+.crow .bar.red { background: var(--red); } .crow .bar.amber { background: #d99a00; } .crow .bar.green { background: var(--green); }
+.crow b { display: block; }
+.crow .sub { font-size: .8rem; color: var(--muted); display: block; }
+.crow .sla { font-size: .75rem; text-align: right; white-space: nowrap; }
+.sla.over { color: var(--red); font-weight: 700; }
+.sla.done { color: var(--green); }
+.detail { padding: 16px 24px 60px; max-width: 1280px; min-width: 0; }
+.dgrid { display: grid; grid-template-columns: minmax(360px, 1fr) minmax(360px, 1fr); gap: 16px; align-items: start; }
+.dhead { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; flex-wrap: wrap; }
+.dhead h1 { margin: 0; font-size: 1.4rem; }
+.trace { width: 100%; border-collapse: collapse; font-size: .82rem; }
+.trace th, .trace td { text-align: left; vertical-align: top; padding: 6px 6px; border-top: 1px solid var(--line); }
+.trace td.q { width: 42%; }
+.trace .raw { font-style: italic; color: var(--ink-2); }
+.trace .why { display: block; background: none; padding: 0; margin: 2px 0 0; font-size: .75rem; color: var(--muted); }
+.trace tr.urgent td { background: var(--red-soft); }
+.form label { margin: .4rem 0; }
+.decisions { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.decisions label { display: flex; align-items: center; gap: 6px; border: 1.5px solid var(--line); border-radius: 10px; padding: 8px; margin: 0; cursor: pointer; color: var(--ink); }
+.decisions input { width: auto; margin: 0; }
+.decisions label:has(input:checked) { border-color: var(--teal); background: var(--teal-soft); }
+textarea { display: block; width: 100%; min-height: 70px; margin-top: .25rem; padding: .6rem; font: inherit; color: var(--ink); background: var(--card); border: 1.5px solid var(--line); border-radius: 10px; }
+.reviewed { background: var(--green-soft); border-radius: 12px; padding: 10px 12px; }
+.planning { max-width: 1100px; margin: 0 auto; padding: 16px; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; }
+.tile { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 14px; }
+.tile .n { font-size: 2rem; font-weight: 700; }
+.tile .l { color: var(--muted); font-size: .85rem; }
+.hbar { display: grid; grid-template-columns: 220px 1fr 40px; gap: 8px; align-items: center; margin: 6px 0; font-size: .88rem; }
+.hbar i { display: block; height: 12px; border-radius: 6px; background: var(--accent); }
+.hbar.amber i { background: #d99a00; }
+.cols { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 900px) {
+  .layout, .dgrid, .cols { grid-template-columns: 1fr; }
+  .list { position: static; max-height: none; border-right: 0; }
+  .hbar { grid-template-columns: 130px 1fr 32px; }
+}
+.pp { white-space: pre-wrap; overflow-wrap: anywhere; font: inherit; font-size: .9rem; background: var(--bg); padding: 10px; border-radius: 10px; margin: 0 0 10px; }
+.detail, .dgrid > div { min-width: 0; }
+#hubBanner { padding: 8px 16px; font-size: .9rem; display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+#hubBanner .btn { min-height: 36px; padding: .3rem .8rem; }
+.hubok { background: var(--green-soft); color: var(--green); }
+.hubwarn { background: var(--amber-soft); color: var(--amber); }

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DivyaDrishti Optometrist Bridge</title>
+  <meta name="theme-color" content="#14212e">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/portal.css">
+</head>
+<body class="portal">
+  <header class="top">
+    <a href="portal.html" class="brand">
+      <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><path d="M26.4 11.2A11.5 11.5 0 1 0 26.4 20.8" fill="none" stroke="currentColor" stroke-width="5.5"/></svg>
+      <span>DivyaDrishti · Optometrist Bridge</span>
+    </a>
+    <nav class="row gap">
+      <button class="chip on" data-tab="queue">Review queue</button>
+      <button class="chip" data-tab="planning">Camp planning</button>
+      <span class="chip" id="me" title="Reviewer"></span>
+    </nav>
+  </header>
+  <div id="hubBanner" class="hubwarn" role="status"></div>
+  <div class="layout" id="queueTab">
+    <aside class="list">
+      <div class="filters row gap wrap">
+        <button class="chip on" data-lane="">All</button>
+        <button class="chip" data-lane="red">Red</button>
+        <button class="chip" data-lane="amber">Amber</button>
+        <button class="chip" data-lane="green">Green</button>
+        <label class="inline"><input type="checkbox" id="openOnly" checked> open only</label>
+      </div>
+      <ul id="cases"></ul>
+      <p class="muted small" id="listMeta"></p>
+    </aside>
+    <section class="detail" id="detail"><p class="muted">Select a case.</p></section>
+  </div>
+  <section class="planning" id="planningTab" hidden></section>
+  <script type="module" src="js/portal.js"></script>
+</body>
+</html>

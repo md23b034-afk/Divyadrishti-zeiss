@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>DivyaDrishti</title>
+  <meta name="description" content="Voice-first adaptive eye-care interview and functional vision profile, reviewed by a remote optometrist.">
+  <meta name="theme-color" content="#14212e">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <header class="top">
+    <a href="./" id="homeLink" class="brand" aria-label="DivyaDrishti home">
+      <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><path d="M26.4 11.2A11.5 11.5 0 1 0 26.4 20.8" fill="none" stroke="currentColor" stroke-width="5.5"/></svg>
+      <span>DivyaDrishti</span>
+    </a>
+    <div class="row gap">
+      <button id="lockBtn" class="chip" hidden>🔒</button>
+      <button id="voiceToggle" class="chip" aria-pressed="true">🔊</button>
+      <span id="syncBadge" class="chip" title="Sync status">✓</span>
+    </div>
+  </header>
+  <main id="main"><p class="muted center">Loading…</p></main>
+  <noscript><p class="card">DivyaDrishti needs JavaScript.</p></noscript>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

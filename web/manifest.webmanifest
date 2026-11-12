@@ -1,0 +1,10 @@
+{
+  "name": "DivyaDrishti",
+  "short_name": "DivyaDrishti",
+  "description": "Voice-first adaptive eye-care interview, reviewed by a remote optometrist",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f5f0e6",
+  "theme_color": "#14212e",
+  "icons": [{ "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}

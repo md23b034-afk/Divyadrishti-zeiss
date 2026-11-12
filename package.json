@@ -1,0 +1,11 @@
+{
+  "name": "divyadrishti",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "Voice-first adaptive anamnesis, functional vision profile and remote optometrist bridge (ZEISS Hackathon, Theme 3)",
+  "scripts": {
+    "test": "node --test tests/engine/*.test.mjs",
+    "seed": "node tools/make_seed.mjs"
+  }
+}

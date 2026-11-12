@@ -1,0 +1,5463 @@
+[
+ {
+  "case": {
+   "id": "936e2c79-aad1-4a29-aba2-23b5863aef78",
+   "createdAt": "2026-11-10T15:25:05.818Z",
+   "appVersion": "0.2.0",
+   "lang": "en",
+   "demo": true,
+   "site": {
+    "name": "Chennai Optics, Velachery",
+    "type": "store"
+   },
+   "operator": "Store owner (demo)",
+   "patient": {
+    "name": "S. Kumar",
+    "phone": "+91 98400 00421",
+    "village": "Velachery, Chennai 600042",
+    "age": 54,
+    "sex": "male"
+   },
+   "consent": {
+    "given": true,
+    "at": "2026-11-10T15:25:05.818Z",
+    "lang": "en",
+    "textVersion": "consent-v1",
+    "method": "demo"
+   },
+   "interview": {
+    "answers": {
+     "age": 54,
+     "sex": "male",
+     "complaint": [
+      "strain",
+      "near_blur"
+     ],
+     "rf_sudden": false,
+     "rf_pain": false,
+     "conditions": [
+      "none"
+     ],
+     "glaucoma_family": false,
+     "eye_surgery": "none",
+     "glasses_now": true,
+     "glasses_type": "bifocal",
+     "glasses_years": 3,
+     "glasses_ok": "near_blur",
+     "rx_known": {
+      "R": {
+       "sph": -2.5,
+       "cyl": -0.75,
+       "axis": 180
+      },
+      "L": {
+       "sph": -2.25,
+       "cyl": -0.5,
+       "axis": 170
+      },
+      "text": "R −2.50 / −0.75 × 180   L −2.25 / −0.50 × 170",
+      "warnings": []
+     },
+     "frequent_change": false,
+     "occupation": "office",
+     "near_hours": 2,
+     "screen_hours": 6,
+     "outdoor_hours": 1,
+     "drives": true,
+     "night_glare": false,
+     "budget": "high"
+    },
+    "trace": [
+     {
+      "qid": "age",
+      "module": "core",
+      "question": "How old are you?",
+      "questionEn": "How old are you?",
+      "reason": "Age sets which eye changes to look for: myopia in children, presbyopia after 40, cataract after 50.",
+      "raw": "fifty four",
+      "value": 54,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:05.822Z"
+     },
+     {
+      "qid": "sex",
+      "module": "core",
+      "question": "Are you female or male?",
+      "questionEn": "Are you female or male?",
+      "reason": "Needed for the record; some conditions differ by sex (angle-closure glaucoma is more common in women).",
+      "raw": "male",
+      "value": "male",
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:05.825Z"
+     },
+     {
+      "qid": "complaint",
+      "module": "core",
+      "question": "What brings you here today? For example: blurry far away, blurry up close, headache or tired eyes, or just a check-up.",
+      "questionEn": "What brings you here today? For example: blurry far away, blurry up close, headache or tired eyes, or just a check-up.",
+      "reason": "The main complaint decides which tests and follow-up questions matter.",
+      "raw": "blurry when I read and a headache after computer work",
+      "value": [
+       "strain",
+       "near_blur"
+      ],
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:05.832Z"
+     },
+     {
+      "qid": "rf_sudden",
+      "module": "redflag",
+      "question": "In the last few weeks, has your sight suddenly got worse, or have you seen flashes of light, a dark shadow like a curtain, or double vision?",
+      "questionEn": "In the last few weeks, has your sight suddenly got worse, or have you seen flashes of light, a dark shadow like a curtain, or double vision?",
+      "reason": "Sudden loss, flashes, a curtain or new double vision can mean retinal detachment, a blocked vessel or a stroke: same-day referral.",
+      "raw": "no",
+      "value": false,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:05.837Z"
+     },
+     {
+      "qid": "rf_pain",
+      "module": "redflag",
+      "question": "Do you have eye pain, redness, or an eye injury right now?",
+      "questionEn": "Do you have eye pain, redness, or an eye injury right now?",
+      "reason": "A painful red eye or an injury needs a doctor, not new glasses.",
+      "raw": "no",
+      "value": false,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:05.838Z"
+     },
+     {
+      "qid": "conditions",
+      "module": "medical",
+      "question": "Do you have diabetes, high blood pressure, or a thyroid problem?",
+      "questionEn": "Do you have diabetes, high blood pressure, or a thyroid problem?",
+      "reason": "Diabetes damages the retina silently and makes glasses power fluctuate; blood pressure and thyroid disease also affect the eyes.",
+      "raw": "no",
+      "value": [
+       "none"
+      ],
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:05.839Z"
+     },
+     {
+      "qid": "glaucoma_family",
+      "module": "medical",
+      "question": "Does your mother, father, brother or sister have glaucoma, the eye pressure disease?",
+      "questionEn": "Does your mother, father, brother or sister have glaucoma, the eye pressure disease?",
+      "reason": "Glaucoma runs in families and steals sight painlessly; relatives over 40 need an eye-pressure and optic-nerve check.",
+      "raw": "no",
+      "value": false,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:05.840Z"
+     },
+     {
+      "qid": "eye_surgery",
+      "module": "medical",
+      "question": "Have you had cataract surgery, or any other eye operation?",
+      "questionEn": "Have you had cataract surgery, or any other eye operation?",
+      "reason": "After cataract surgery the eye cannot focus up close, so near glasses are needed whatever the age.",
+      "raw": "no",
+      "value": "none",
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:05.842Z"
+     },
+     {
+      "qid": "glasses_now",
+      "module": "glasses",
+      "question": "Do you wear glasses now?",
+      "questionEn": "Do you wear glasses now?",
+      "reason": "Current glasses show the past prescription and what is or isn’t working.",
+      "raw": "yes",
+      "value": true,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:05.842Z"
+     },
+     {
+      "qid": "glasses_type",
+      "module": "glasses",
+      "question": "What kind are they: for distance, for reading, bifocal with a line, or progressive with no line?",
+      "questionEn": "What kind are they: for distance, for reading, bifocal with a line, or progressive with no line?",
+      "reason": "Tells us which zones the patient already relies on, and whether they have adapted to multifocals before.",
+      "raw": "bifocal",
+      "value": "bifocal",
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:05.847Z"
+     },
+     {
+      "qid": "glasses_years",
+      "module": "glasses",
+      "question": "How old are your current glasses, in years?",
+      "questionEn": "How old are your current glasses, in years?",
+      "reason": "Prescriptions older than about two years are often out of date, especially after 40.",
+      "raw": "three years",
+      "value": 3,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:05.848Z"
+     },
+     {
+      "qid": "glasses_ok",
+      "module": "glasses",
+      "question": "With these glasses, how do you see: fine, blurry far away, blurry up close, or do they give you headaches?",
+      "questionEn": "With these glasses, how do you see: fine, blurry far away, blurry up close, or do they give you headaches?",
+      "reason": "Separates an outdated prescription from a wrong lens type or a poor fit.",
+      "raw": "near is blurry",
+      "value": "near_blur",
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:05.851Z"
+     },
+     {
+      "qid": "rx_known",
+      "module": "glasses",
+      "question": "If you have the prescription slip, read it out. For example: right eye minus one point five, cylinder minus point five, axis ninety. Or say skip.",
+      "questionEn": "If you have the prescription slip, read it out. For example: right eye minus one point five, cylinder minus point five, axis ninety. Or say skip.",
+      "reason": "A known prescription is the best starting point; it is checked against valid lens steps and for big differences between the eyes.",
+      "raw": "right eye minus two point five cylinder minus point seven five axis one eighty left eye minus two point two five cylinder minus point five axis one seventy",
+      "value": {
+       "R": {
+        "sph": -2.5,
+        "cyl": -0.75,
+        "axis": 180
+       },
+       "L": {
+        "sph": -2.25,
+        "cyl": -0.5,
+        "axis": 170
+       },
+       "text": "R −2.50 / −0.75 × 180   L −2.25 / −0.50 × 170",
+       "warnings": []
+      },
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:05.856Z"
+     },
+     {
+      "qid": "frequent_change",
+      "module": "glasses",
+      "question": "In the last two years, have you needed new glasses more than once because the power kept changing?",
+      "questionEn": "In the last two years, have you needed new glasses more than once because the power kept changing?",
+      "reason": "Power that keeps changing can signal a developing cataract or uncontrolled diabetes.",
+      "raw": "no",
+      "value": false,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:05.857Z"
+     },
+     {
+      "qid": "occupation",
+      "module": "lifestyle",
+      "question": "What work do you do for most of the day? For example: farming, tailoring, driving, a shop, office or computer work, housework, or studies.",
+      "questionEn": "What work do you do for most of the day? For example: farming, tailoring, driving, a shop, office or computer work, housework, or studies.",
+      "reason": "Work sets how many hours go to near, arm’s-length and far vision, the core of the vision profile.",
+      "raw": "I am an accountant",
+      "value": "office",
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:05.873Z"
+     },
+     {
+      "qid": "near_hours",
+      "module": "lifestyle",
+      "question": "On a normal day, how many hours do you spend on close work: reading, the phone, sewing or fine handwork?",
+      "questionEn": "On a normal day, how many hours do you spend on close work: reading, the phone, sewing or fine handwork?",
+      "reason": "From the late 30s, hours of close work decide the reading add and the lens type.",
+      "raw": "two hours",
+      "value": 2,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:05.874Z"
+     },
+     {
+      "qid": "screen_hours",
+      "module": "lifestyle",
+      "question": "How many hours a day do you work on a computer or laptop screen?",
+      "questionEn": "How many hours a day do you work on a computer or laptop screen?",
+      "reason": "Screens sit at arm’s length (\"intermediate\" vision), which standard bifocals do not cover and progressives cover narrowly.",
+      "raw": "six hours",
+      "value": 6,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:05.874Z"
+     },
+     {
+      "qid": "outdoor_hours",
+      "module": "lifestyle",
+      "question": "How many hours a day are you outdoors in daylight?",
+      "questionEn": "How many hours a day are you outdoors in daylight?",
+      "reason": "Long hours in sunlight call for UV protection and possibly photochromic lenses.",
+      "raw": "about one hour",
+      "value": 1,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:05.875Z"
+     },
+     {
+      "qid": "drives",
+      "module": "lifestyle",
+      "question": "Do you drive a vehicle or ride a two-wheeler?",
+      "questionEn": "Do you drive a vehicle or ride a two-wheeler?",
+      "reason": "Driving needs sharp distance vision and wide side vision; it changes lens design and coating advice.",
+      "raw": "yes",
+      "value": true,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:05.875Z"
+     },
+     {
+      "qid": "night_glare",
+      "module": "lifestyle",
+      "question": "At night, do headlights or street lights dazzle you, or do colours look dull and faded?",
+      "questionEn": "At night, do headlights or street lights dazzle you, or do colours look dull and faded?",
+      "reason": "Glare and faded colours after 50 are early cataract signs.",
+      "raw": "no",
+      "value": false,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:05.876Z"
+     },
+     {
+      "qid": "budget",
+      "module": "preference",
+      "question": "How much would you like to spend on the lenses: under one thousand rupees, one to three thousand, or more than three thousand?",
+      "questionEn": "How much would you like to spend on the lenses: under one thousand rupees, one to three thousand, or more than three thousand?",
+      "reason": "Lens options for near-and-far needs range from low-cost bifocals to progressives; advice must be affordable to be followed.",
+      "raw": "more than three thousand",
+      "value": "high",
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:05.878Z"
+     }
+    ],
+    "skipped": [],
+    "startedAt": "2026-11-10T20:33:05.820Z",
+    "finishedAt": "2026-11-10T20:33:05.878Z",
+    "asked": 21,
+    "bank": 30,
+    "notAsked": [
+     "rf_sudden_which",
+     "rf_pain_severe",
+     "child_white",
+     "child_squint",
+     "diabetes_years",
+     "retina_exam",
+     "child_board",
+     "parent_myopia",
+     "falls"
+    ]
+   },
+   "measurements": {
+    "readingDistanceCm": 36,
+    "nearPointCm": 58,
+    "acuity": {
+     "distanceM": 2,
+     "R": {
+      "logmar": 0.2
+     },
+     "L": {
+      "logmar": 0.2
+     }
+    },
+    "amsler": {
+     "R": "normal",
+     "L": "normal"
+    },
+    "pd": {
+     "binocularMm": 63.5,
+     "rightMm": 32,
+     "leftMm": 31.5,
+     "nearMm": 60,
+     "method": "iris"
+    }
+   },
+   "profile": {
+    "derived": {
+     "age": 54,
+     "isChild": false,
+     "occ": "office",
+     "pseudophakic": false,
+     "presbyopeLikely": true,
+     "urgent": false,
+     "diabetic": false
+    },
+    "vision": {
+     "zones": {
+      "near": {
+       "hours": 2,
+       "share": 0.18181818181818182,
+       "source": "reported",
+       "workingDistanceCm": 36,
+       "distanceSource": "measured",
+       "demandD": 2.75
+      },
+      "intermediate": {
+       "hours": 7,
+       "share": 0.6363636363636364,
+       "source": "reported",
+       "workingDistanceCm": 66,
+       "demandD": 1.5
+      },
+      "distance": {
+       "hours": 2,
+       "share": 0.18181818181818182,
+       "source": "reported"
+      }
+     },
+     "dominance": "intermediate",
+     "designEmphasis": "Intermediate",
+     "inputsReported": 3,
+     "nearDistanceMeasured": true
+    },
+    "presbyopia": {
+     "status": "established",
+     "amplitudeD": 1.7,
+     "amplitudeSource": "measured near point",
+     "expectedAmplitudeD": {
+      "min": 1.5,
+      "avg": 2.3
+     },
+     "workingDistanceCm": 36,
+     "nearDemandD": 2.75,
+     "addD": 2,
+     "addRangeD": [
+      1.75,
+      2.25
+     ],
+     "intermediateAddD": 0.75,
+     "measuredNearPoint": true
+    },
+    "myopiaRisk": null,
+    "triage": {
+     "lane": "green",
+     "flags": []
+    },
+    "recommendation": {
+     "category": "office",
+     "title": "Office (near-variable) lens for work, plus distance glasses if needed",
+     "rationale": [
+      "Arm’s-length work dominates (64% of the day): bifocals have no intermediate zone and standard progressives keep it narrow.",
+      "Estimated reading add about +2.00 D for 36 cm (measured near point). The optometrist confirms."
+     ],
+     "coatings": [
+      "Anti-reflective coating for night driving and glare"
+     ],
+     "notes": [
+      "If only one pair is affordable: a progressive with the Intermediate design emphasis.",
+      "Blue-light filter: optional, not a treatment. A Cochrane review of 17 trials (2023) found it probably makes no difference to eye strain, sleep or retinal health, and no harm. What relieves screen strain: the right power at screen distance (for this patient, an intermediate add for the screen distance), an anti-reflective coating, blinking and 20-20-20 breaks."
+     ],
+     "centrationNeeded": true,
+     "example": "e.g. ZEISS SmartLife Progressive with the Intermediate design option (one-pair alternative)",
+     "decisionPath": [
+      {
+       "rule": "Red-flag lane",
+       "passed": false,
+       "detail": "lane green"
+      },
+      {
+       "rule": "Child under 16",
+       "passed": false,
+       "detail": "age 54"
+      },
+      {
+       "rule": "Needs a reading add",
+       "passed": true,
+       "detail": "add +2.00 D at 36 cm, status established"
+      },
+      {
+       "rule": "Fall at 65+ and active outdoors",
+       "passed": false,
+       "detail": "age 54, fall no, distance 18% of day"
+      },
+      {
+       "rule": "Mostly close work, little else (near ≥50%, others <25%, no distance complaint)",
+       "passed": false,
+       "detail": "near 18%, arm’s length 64%, distance 18%, distance complaint yes"
+      },
+      {
+       "rule": "Arm’s-length work dominates, or close + arm’s length ≥75%",
+       "passed": true,
+       "detail": "dominance intermediate, close + arm’s length 82%, distance 18%"
+      }
+     ]
+    },
+    "advice": [
+     "rule_20_20_20"
+    ],
+    "checks": [
+     "reading_distance",
+     "near_point",
+     "acuity",
+     "amsler",
+     "pd"
+    ],
+    "quality": {
+     "items": [
+      {
+       "key": "zones",
+       "label": "Daily hours reported by the patient",
+       "value": "3 of 3 (rest from occupation)",
+       "ok": true
+      },
+      {
+       "key": "nearDistance",
+       "label": "Near working distance",
+       "value": "measured, uncalibrated camera (±15%)",
+       "ok": true
+      },
+      {
+       "key": "amplitude",
+       "label": "Focusing range",
+       "value": "measured near point",
+       "ok": true
+      },
+      {
+       "key": "acuity",
+       "label": "Eye-chart letter size",
+       "value": "screen not calibrated: sizes approximate",
+       "ok": false
+      },
+      {
+       "key": "pd",
+       "label": "Pupillary distance",
+       "value": "iris",
+       "ok": true
+      },
+      {
+       "key": "answers",
+       "label": "Answers",
+       "value": "21 by voice, 0 by tap",
+       "ok": true
+      }
+     ],
+     "level": "high"
+    },
+    "rulesVersion": "2026.11-r2",
+    "summary": "54y · office · intermediate-dominant · add ~+2.00 · Office (near-variable) lens for work, plus distance glasses if needed"
+   },
+   "rulesVersion": "2026.11-r2",
+   "passport": {
+    "lang": "en",
+    "text": "DivyaDrishti Vision Passport · DD-936E2C\nS. Kumar · 11/11/2026\nYour eyes are mostly used for: arm’s-length work (computer, counter, cooking).\nSuggested: Work glasses for close and arm’s-length work (add +2.00).\nRx: R −2.50 / −0.75 × 180   L −2.25 / −0.50 × 170\nAn optometrist will check these results and confirm your glasses.\nTips: Every 20 minutes of close or screen work, look 6 metres away for 20 seconds.\nShow this message at any optical store or eye camp."
+   }
+  },
+  "receivedMinutesAgo": 300,
+  "review": {
+   "reviewer": {
+    "name": "Optom. A. Meenakshi",
+    "regNo": "TN-OPT-0000 (demo)"
+   },
+   "decision": "approve",
+   "lensCategory": "office",
+   "designEmphasis": "Intermediate",
+   "nextStep": "Office lens for the desk; keep current bifocal for driving. Recheck in 12 months.",
+   "notes": "Measured near point 58 cm matches age. PD 63.5 mm (iris scale) acceptable for an office lens; confirm with a PD ruler.",
+   "messageToPatient": "Your work glasses are approved. Collect them at Chennai Optics in 5 days.",
+   "afterMinutes": 18,
+   "decisionLabel": "Approved"
+  }
+ },
+ {
+  "case": {
+   "id": "4ba09db4-5dd5-4b68-ad5a-f4fb0531af19",
+   "createdAt": "2026-11-10T19:10:05.936Z",
+   "appVersion": "0.2.0",
+   "lang": "ta",
+   "demo": true,
+   "site": {
+    "name": "Eye camp, Kanchipuram",
+    "type": "camp"
+   },
+   "operator": "Camp volunteer (demo)",
+   "patient": {
+    "name": "R. Lakshmi",
+    "phone": "+91 94440 00387",
+    "village": "Kanchipuram 631501",
+    "age": 47,
+    "sex": "female"
+   },
+   "consent": {
+    "given": true,
+    "at": "2026-11-10T19:10:05.936Z",
+    "lang": "ta",
+    "textVersion": "consent-v1",
+    "method": "demo"
+   },
+   "interview": {
+    "answers": {
+     "age": 47,
+     "sex": "female",
+     "complaint": [
+      "near_blur"
+     ],
+     "rf_sudden": false,
+     "rf_pain": false,
+     "conditions": [
+      "diabetes"
+     ],
+     "diabetes_years": 8,
+     "retina_exam": "never",
+     "glaucoma_family": false,
+     "eye_surgery": "none",
+     "glasses_now": false,
+     "occupation": "tailor",
+     "near_hours": 7,
+     "outdoor_hours": 1,
+     "drives": false,
+     "budget": "low"
+    },
+    "trace": [
+     {
+      "qid": "age",
+      "module": "core",
+      "question": "உங்கள் வயது என்ன?",
+      "questionEn": "How old are you?",
+      "reason": "Age sets which eye changes to look for: myopia in children, presbyopia after 40, cataract after 50.",
+      "raw": "நாற்பத்தி ஏழு",
+      "value": 47,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "ta",
+      "at": "2026-11-10T20:33:05.937Z"
+     },
+     {
+      "qid": "sex",
+      "module": "core",
+      "question": "நீங்கள் பெண்ணா அல்லது ஆணா?",
+      "questionEn": "Are you female or male?",
+      "reason": "Needed for the record; some conditions differ by sex (angle-closure glaucoma is more common in women).",
+      "raw": "பெண்",
+      "value": "female",
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "ta",
+      "at": "2026-11-10T20:33:05.939Z"
+     },
+     {
+      "qid": "complaint",
+      "module": "core",
+      "question": "இன்று எதற்காக வந்தீர்கள்? உதாரணமாக: தூரம் மங்கலாகத் தெரிவது, அருகில் மங்கலாகத் தெரிவது, தலைவலி அல்லது கண் சோர்வு, அல்லது வெறும் பரிசோதனை.",
+      "questionEn": "What brings you here today? For example: blurry far away, blurry up close, headache or tired eyes, or just a check-up.",
+      "reason": "The main complaint decides which tests and follow-up questions matter.",
+      "raw": "அருகில் படிக்க கஷ்டமா இருக்கு",
+      "value": [
+       "near_blur"
+      ],
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "ta",
+      "at": "2026-11-10T20:33:05.944Z"
+     },
+     {
+      "qid": "rf_sudden",
+      "module": "redflag",
+      "question": "கடந்த சில வாரங்களில் பார்வை திடீரென்று குறைந்ததா, அல்லது ஒளி மின்னல், திரை போன்ற கருப்பு நிழல், அல்லது இரண்டாகத் தெரிவது ஏற்பட்டதா?",
+      "questionEn": "In the last few weeks, has your sight suddenly got worse, or have you seen flashes of light, a dark shadow like a curtain, or double vision?",
+      "reason": "Sudden loss, flashes, a curtain or new double vision can mean retinal detachment, a blocked vessel or a stroke: same-day referral.",
+      "raw": "இல்லை",
+      "value": false,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "ta",
+      "at": "2026-11-10T20:33:05.948Z"
+     },
+     {
+      "qid": "rf_pain",
+      "module": "redflag",
+      "question": "இப்போது கண்ணில் வலி, சிவப்பு, அல்லது ஏதேனும் காயம் இருக்கிறதா?",
+      "questionEn": "Do you have eye pain, redness, or an eye injury right now?",
+      "reason": "A painful red eye or an injury needs a doctor, not new glasses.",
+      "raw": "இல்ல",
+      "value": false,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "ta",
+      "at": "2026-11-10T20:33:05.948Z"
+     },
+     {
+      "qid": "conditions",
+      "module": "medical",
+      "question": "உங்களுக்கு சர்க்கரை நோய், ரத்த அழுத்தம், அல்லது தைராய்டு பிரச்சனை இருக்கிறதா?",
+      "questionEn": "Do you have diabetes, high blood pressure, or a thyroid problem?",
+      "reason": "Diabetes damages the retina silently and makes glasses power fluctuate; blood pressure and thyroid disease also affect the eyes.",
+      "raw": "சுகர் இருக்கு",
+      "value": [
+       "diabetes"
+      ],
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "ta",
+      "at": "2026-11-10T20:33:05.950Z"
+     },
+     {
+      "qid": "diabetes_years",
+      "module": "medical",
+      "question": "எத்தனை வருடங்களாக சர்க்கரை நோய் இருக்கிறது?",
+      "questionEn": "For how many years have you had diabetes?",
+      "reason": "Retinopathy risk rises with every year of diabetes; a new diagnosis also means the glasses power may still be shifting.",
+      "raw": "எட்டு வருஷம்",
+      "value": 8,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "ta",
+      "at": "2026-11-10T20:33:05.950Z"
+     },
+     {
+      "qid": "retina_exam",
+      "module": "medical",
+      "question": "கடைசியாக எப்போது மருத்துவர் கண்ணில் சொட்டு மருந்து போட்டு கண்ணின் பின்பகுதியைப் பரிசோதித்தார்? கடந்த ஒரு வருடத்திற்குள், ஒரு வருடத்திற்கு முன், அல்லது ஒருபோதும் இல்லை?",
+      "questionEn": "When did a doctor last put drops in your eyes and check the back of the eye? Within the last year, more than a year ago, or never?",
+      "reason": "People with diabetes need a dilated retina check every year; an overdue check is referred.",
+      "raw": "ஒருபோதும் பார்க்கவில்லை",
+      "value": "never",
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "ta",
+      "at": "2026-11-10T20:33:05.952Z"
+     },
+     {
+      "qid": "glaucoma_family",
+      "module": "medical",
+      "question": "உங்கள் அம்மா, அப்பா, சகோதரர் அல்லது சகோதரிக்கு கண் அழுத்த நோய் (கிளாக்கோமா) இருக்கிறதா?",
+      "questionEn": "Does your mother, father, brother or sister have glaucoma, the eye pressure disease?",
+      "reason": "Glaucoma runs in families and steals sight painlessly; relatives over 40 need an eye-pressure and optic-nerve check.",
+      "raw": "இல்லை",
+      "value": false,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "ta",
+      "at": "2026-11-10T20:33:05.952Z"
+     },
+     {
+      "qid": "eye_surgery",
+      "module": "medical",
+      "question": "உங்களுக்கு கண்புரை அறுவை சிகிச்சை அல்லது வேறு ஏதேனும் கண் அறுவை சிகிச்சை செய்யப்பட்டதா?",
+      "questionEn": "Have you had cataract surgery, or any other eye operation?",
+      "reason": "After cataract surgery the eye cannot focus up close, so near glasses are needed whatever the age.",
+      "raw": "இல்லை",
+      "value": "none",
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "ta",
+      "at": "2026-11-10T20:33:05.954Z"
+     },
+     {
+      "qid": "glasses_now",
+      "module": "glasses",
+      "question": "இப்போது கண்ணாடி அணிகிறீர்களா?",
+      "questionEn": "Do you wear glasses now?",
+      "reason": "Current glasses show the past prescription and what is or isn’t working.",
+      "raw": "இல்லை",
+      "value": false,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "ta",
+      "at": "2026-11-10T20:33:05.954Z"
+     },
+     {
+      "qid": "occupation",
+      "module": "lifestyle",
+      "question": "நாளின் பெரும்பகுதி என்ன வேலை செய்கிறீர்கள்? உதாரணமாக: விவசாயம், தையல், வண்டி ஓட்டுதல், கடை, அலுவலகம் அல்லது கணினி வேலை, வீட்டு வேலை, அல்லது படிப்பு.",
+      "questionEn": "What work do you do for most of the day? For example: farming, tailoring, driving, a shop, office or computer work, housework, or studies.",
+      "reason": "Work sets how many hours go to near, arm’s-length and far vision, the core of the vision profile.",
+      "raw": "தையல் வேலை",
+      "value": "tailor",
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "ta",
+      "at": "2026-11-10T20:33:05.968Z"
+     },
+     {
+      "qid": "near_hours",
+      "module": "lifestyle",
+      "question": "ஒரு சாதாரண நாளில் எத்தனை மணி நேரம் அருகில் பார்க்கும் வேலை செய்கிறீர்கள்: படிப்பது, போன், தையல் அல்லது நுணுக்கமான கைவேலை?",
+      "questionEn": "On a normal day, how many hours do you spend on close work: reading, the phone, sewing or fine handwork?",
+      "reason": "From the late 30s, hours of close work decide the reading add and the lens type.",
+      "raw": "ஏழு மணி நேரம்",
+      "value": 7,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "ta",
+      "at": "2026-11-10T20:33:05.969Z"
+     },
+     {
+      "qid": "outdoor_hours",
+      "module": "lifestyle",
+      "question": "நாளில் எத்தனை மணி நேரம் வெளியே பகல் வெளிச்சத்தில் இருக்கிறீர்கள்?",
+      "questionEn": "How many hours a day are you outdoors in daylight?",
+      "reason": "Long hours in sunlight call for UV protection and possibly photochromic lenses.",
+      "raw": "ஒரு மணி நேரம்",
+      "value": 1,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "ta",
+      "at": "2026-11-10T20:33:05.969Z"
+     },
+     {
+      "qid": "drives",
+      "module": "lifestyle",
+      "question": "நீங்கள் வாகனம் அல்லது இருசக்கர வாகனம் ஓட்டுகிறீர்களா?",
+      "questionEn": "Do you drive a vehicle or ride a two-wheeler?",
+      "reason": "Driving needs sharp distance vision and wide side vision; it changes lens design and coating advice.",
+      "raw": "இல்லை",
+      "value": false,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "ta",
+      "at": "2026-11-10T20:33:05.969Z"
+     },
+     {
+      "qid": "budget",
+      "module": "preference",
+      "question": "லென்ஸுக்கு எவ்வளவு செலவு செய்ய விரும்புகிறீர்கள்: ஆயிரம் ரூபாய்க்குக் குறைவாக, ஆயிரம் முதல் மூவாயிரம், அல்லது மூவாயிரத்திற்கு மேல்?",
+      "questionEn": "How much would you like to spend on the lenses: under one thousand rupees, one to three thousand, or more than three thousand?",
+      "reason": "Lens options for near-and-far needs range from low-cost bifocals to progressives; advice must be affordable to be followed.",
+      "raw": "ஆயிரம் ரூபாய்க்குக் குறைவாக",
+      "value": "low",
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "ta",
+      "at": "2026-11-10T20:33:05.970Z"
+     }
+    ],
+    "skipped": [],
+    "startedAt": "2026-11-10T20:33:05.937Z",
+    "finishedAt": "2026-11-10T20:33:05.970Z",
+    "asked": 16,
+    "bank": 30,
+    "notAsked": [
+     "rf_sudden_which",
+     "rf_pain_severe",
+     "child_white",
+     "child_squint",
+     "glasses_type",
+     "glasses_years",
+     "glasses_ok",
+     "rx_known",
+     "frequent_change",
+     "screen_hours",
+     "child_board",
+     "parent_myopia",
+     "night_glare",
+     "falls"
+    ]
+   },
+   "measurements": {
+    "readingDistanceCm": 29,
+    "acuity": {
+     "distanceM": 2,
+     "R": {
+      "logmar": 0.1
+     },
+     "L": {
+      "logmar": 0.1
+     }
+    },
+    "amsler": {
+     "R": "normal",
+     "L": "normal"
+    }
+   },
+   "profile": {
+    "derived": {
+     "age": 47,
+     "isChild": false,
+     "occ": "tailor",
+     "pseudophakic": false,
+     "presbyopeLikely": true,
+     "urgent": false,
+     "diabetic": true
+    },
+    "vision": {
+     "zones": {
+      "near": {
+       "hours": 7,
+       "share": 0.7777777777777778,
+       "source": "reported",
+       "workingDistanceCm": 29,
+       "distanceSource": "measured",
+       "demandD": 3.5
+      },
+      "intermediate": {
+       "hours": 1,
+       "share": 0.1111111111111111,
+       "source": "occupation",
+       "workingDistanceCm": 66,
+       "demandD": 1.5
+      },
+      "distance": {
+       "hours": 1,
+       "share": 0.1111111111111111,
+       "source": "reported"
+      }
+     },
+     "dominance": "near",
+     "designEmphasis": "Near",
+     "inputsReported": 2,
+     "nearDistanceMeasured": true
+    },
+    "presbyopia": {
+     "status": "established",
+     "amplitudeD": 3.3,
+     "amplitudeSource": "age (Hofstetter minimum)",
+     "expectedAmplitudeD": {
+      "min": 3.3,
+      "avg": 4.4
+     },
+     "workingDistanceCm": 29,
+     "nearDemandD": 3.5,
+     "addD": 1.75,
+     "addRangeD": [
+      1.5,
+      2
+     ],
+     "intermediateAddD": 0,
+     "measuredNearPoint": false
+    },
+    "myopiaRisk": null,
+    "triage": {
+     "lane": "amber",
+     "flags": [
+      {
+       "lane": "amber",
+       "code": "DIABETES_RETINA_DUE",
+       "title": "Diabetic retina check overdue",
+       "detail": "8 years of diabetes; last dilated retina check: never.",
+       "ref": "diabetes",
+       "action": "Dilated fundus exam or retinal photo at the next camp or vision centre."
+      }
+     ]
+    },
+    "recommendation": {
+     "category": "readers",
+     "title": "Reading glasses at 29 cm",
+     "rationale": [
+      "Mostly close work (78% of the day) and no distance complaint.",
+      "Estimated reading add about +1.75 D for 29 cm (age (Hofstetter minimum)). The optometrist confirms."
+     ],
+     "coatings": [],
+     "notes": [
+      "If both eyes see well far away and there is no astigmatism complaint, ready-made readers are a low-cost option once the optometrist approves the add."
+     ],
+     "centrationNeeded": false,
+     "example": null,
+     "decisionPath": [
+      {
+       "rule": "Red-flag lane",
+       "passed": false,
+       "detail": "lane amber"
+      },
+      {
+       "rule": "Child under 16",
+       "passed": false,
+       "detail": "age 47"
+      },
+      {
+       "rule": "Needs a reading add",
+       "passed": true,
+       "detail": "add +1.75 D at 29 cm, status established"
+      },
+      {
+       "rule": "Fall at 65+ and active outdoors",
+       "passed": false,
+       "detail": "age 47, fall no, distance 11% of day"
+      },
+      {
+       "rule": "Mostly close work, little else (near ≥50%, others <25%, no distance complaint)",
+       "passed": true,
+       "detail": "near 78%, arm’s length 11%, distance 11%, distance complaint no"
+      }
+     ]
+    },
+    "advice": [
+     "rule_20_20_20",
+     "diabetes_yearly",
+     "good_light"
+    ],
+    "checks": [
+     "reading_distance",
+     "near_point",
+     "acuity",
+     "amsler",
+     "pd"
+    ],
+    "quality": {
+     "items": [
+      {
+       "key": "zones",
+       "label": "Daily hours reported by the patient",
+       "value": "2 of 3 (rest from occupation)",
+       "ok": true
+      },
+      {
+       "key": "nearDistance",
+       "label": "Near working distance",
+       "value": "measured, uncalibrated camera (±15%)",
+       "ok": true
+      },
+      {
+       "key": "amplitude",
+       "label": "Focusing range",
+       "value": "age (Hofstetter minimum)",
+       "ok": false
+      },
+      {
+       "key": "acuity",
+       "label": "Eye-chart letter size",
+       "value": "screen not calibrated: sizes approximate",
+       "ok": false
+      },
+      {
+       "key": "answers",
+       "label": "Answers",
+       "value": "16 by voice, 0 by tap",
+       "ok": true
+      }
+     ],
+     "level": "medium"
+    },
+    "rulesVersion": "2026.11-r2",
+    "summary": "47y · tailor · near-dominant · add ~+1.75 · Reading glasses at 29 cm"
+   },
+   "rulesVersion": "2026.11-r2",
+   "passport": {
+    "lang": "ta",
+    "text": "திவ்யதிருஷ்டி பார்வை பாஸ்போர்ட் · DD-4BA09D\nR. Lakshmi · 11/11/2026\nஉங்கள் கண்கள் பெரும்பாலும் பயன்படுவது: அருகிலான வேலை (படித்தல், போன், தையல்).\nபரிந்துரை: படிக்கும் கண்ணாடி (add +1.75).\nஒரு ஆப்டோமெட்ரிஸ்ட் ஒரு நாளுக்குள் உங்கள் முடிவுகளைப் பார்த்து, முழு கண் பரிசோதனை எங்கே, எப்போது என்று சொல்வார்.\nஇதுவும் தேவை: சர்க்கரை நோய்க்கான விழித்திரைப் பரிசோதனை.\nஆலோசனைகள்: ஒவ்வொரு 20 நிமிட அருகிலான வேலை அல்லது திரைக்குப் பிறகு, 20 வினாடிகள் 6 மீட்டர் தூரத்தைப் பாருங்கள். சர்க்கரை நோய் இருந்தால், நன்றாகத் தெரிந்தாலும் வருடத்திற்கு ஒருமுறை விழித்திரையைப் பரிசோதியுங்கள்.\nஇந்தச் செய்தியை எந்த கண்ணாடிக் கடை அல்லது கண் முகாமிலும் காட்டுங்கள்."
+   }
+  },
+  "receivedMinutesAgo": 75
+ },
+ {
+  "case": {
+   "id": "ff6d1f8d-05d1-438d-a8e1-0bd21ca0a387",
+   "createdAt": "2026-11-10T17:15:05.971Z",
+   "appVersion": "0.2.0",
+   "lang": "ta",
+   "demo": true,
+   "site": {
+    "name": "Eye camp, Kanchipuram",
+    "type": "camp"
+   },
+   "operator": "Camp volunteer (demo)",
+   "patient": {
+    "name": "K. Murugan",
+    "phone": "+91 97890 00155",
+    "village": "Walajabad 631605",
+    "age": 62,
+    "sex": "male"
+   },
+   "consent": {
+    "given": true,
+    "at": "2026-11-10T17:15:05.971Z",
+    "lang": "ta",
+    "textVersion": "consent-v1",
+    "method": "demo"
+   },
+   "interview": {
+    "answers": {
+     "age": 62,
+     "sex": "male",
+     "complaint": [
+      "near_blur",
+      "far_blur"
+     ],
+     "rf_sudden": false,
+     "rf_pain": false,
+     "conditions": [
+      "none"
+     ],
+     "glaucoma_family": false,
+     "eye_surgery": "none",
+     "glasses_now": false,
+     "occupation": "farmer",
+     "near_hours": 1,
+     "drives": false,
+     "night_glare": true,
+     "budget": "low"
+    },
+    "trace": [
+     {
+      "qid": "age",
+      "module": "core",
+      "question": "உங்கள் வயது என்ன?",
+      "questionEn": "How old are you?",
+      "reason": "Age sets which eye changes to look for: myopia in children, presbyopia after 40, cataract after 50.",
+      "raw": "62",
+      "value": 62,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "ta",
+      "at": "2026-11-10T20:33:05.971Z"
+     },
+     {
+      "qid": "sex",
+      "module": "core",
+      "question": "நீங்கள் பெண்ணா அல்லது ஆணா?",
+      "questionEn": "Are you female or male?",
+      "reason": "Needed for the record; some conditions differ by sex (angle-closure glaucoma is more common in women).",
+      "raw": "ஆண்",
+      "value": "male",
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "ta",
+      "at": "2026-11-10T20:33:05.973Z"
+     },
+     {
+      "qid": "complaint",
+      "module": "core",
+      "question": "இன்று எதற்காக வந்தீர்கள்? உதாரணமாக: தூரம் மங்கலாகத் தெரிவது, அருகில் மங்கலாகத் தெரிவது, தலைவலி அல்லது கண் சோர்வு, அல்லது வெறும் பரிசோதனை.",
+      "questionEn": "What brings you here today? For example: blurry far away, blurry up close, headache or tired eyes, or just a check-up.",
+      "reason": "The main complaint decides which tests and follow-up questions matter.",
+      "raw": "தூரம் மங்கலா தெரியுது படிக்கவும் கஷ்டம்",
+      "value": [
+       "near_blur",
+       "far_blur"
+      ],
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "ta",
+      "at": "2026-11-10T20:33:05.978Z"
+     },
+     {
+      "qid": "rf_sudden",
+      "module": "redflag",
+      "question": "கடந்த சில வாரங்களில் பார்வை திடீரென்று குறைந்ததா, அல்லது ஒளி மின்னல், திரை போன்ற கருப்பு நிழல், அல்லது இரண்டாகத் தெரிவது ஏற்பட்டதா?",
+      "questionEn": "In the last few weeks, has your sight suddenly got worse, or have you seen flashes of light, a dark shadow like a curtain, or double vision?",
+      "reason": "Sudden loss, flashes, a curtain or new double vision can mean retinal detachment, a blocked vessel or a stroke: same-day referral.",
+      "raw": "இல்லை",
+      "value": false,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "ta",
+      "at": "2026-11-10T20:33:05.980Z"
+     },
+     {
+      "qid": "rf_pain",
+      "module": "redflag",
+      "question": "இப்போது கண்ணில் வலி, சிவப்பு, அல்லது ஏதேனும் காயம் இருக்கிறதா?",
+      "questionEn": "Do you have eye pain, redness, or an eye injury right now?",
+      "reason": "A painful red eye or an injury needs a doctor, not new glasses.",
+      "raw": "இல்லை",
+      "value": false,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "ta",
+      "at": "2026-11-10T20:33:05.981Z"
+     },
+     {
+      "qid": "conditions",
+      "module": "medical",
+      "question": "உங்களுக்கு சர்க்கரை நோய், ரத்த அழுத்தம், அல்லது தைராய்டு பிரச்சனை இருக்கிறதா?",
+      "questionEn": "Do you have diabetes, high blood pressure, or a thyroid problem?",
+      "reason": "Diabetes damages the retina silently and makes glasses power fluctuate; blood pressure and thyroid disease also affect the eyes.",
+      "raw": "எதுவும் இல்லை",
+      "value": [
+       "none"
+      ],
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "ta",
+      "at": "2026-11-10T20:33:05.984Z"
+     },
+     {
+      "qid": "glaucoma_family",
+      "module": "medical",
+      "question": "உங்கள் அம்மா, அப்பா, சகோதரர் அல்லது சகோதரிக்கு கண் அழுத்த நோய் (கிளாக்கோமா) இருக்கிறதா?",
+      "questionEn": "Does your mother, father, brother or sister have glaucoma, the eye pressure disease?",
+      "reason": "Glaucoma runs in families and steals sight painlessly; relatives over 40 need an eye-pressure and optic-nerve check.",
+      "raw": "இல்லை",
+      "value": false,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "ta",
+      "at": "2026-11-10T20:33:05.984Z"
+     },
+     {
+      "qid": "eye_surgery",
+      "module": "medical",
+      "question": "உங்களுக்கு கண்புரை அறுவை சிகிச்சை அல்லது வேறு ஏதேனும் கண் அறுவை சிகிச்சை செய்யப்பட்டதா?",
+      "questionEn": "Have you had cataract surgery, or any other eye operation?",
+      "reason": "After cataract surgery the eye cannot focus up close, so near glasses are needed whatever the age.",
+      "raw": "இல்லை",
+      "value": "none",
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "ta",
+      "at": "2026-11-10T20:33:05.986Z"
+     },
+     {
+      "qid": "glasses_now",
+      "module": "glasses",
+      "question": "இப்போது கண்ணாடி அணிகிறீர்களா?",
+      "questionEn": "Do you wear glasses now?",
+      "reason": "Current glasses show the past prescription and what is or isn’t working.",
+      "raw": "இல்லை",
+      "value": false,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "ta",
+      "at": "2026-11-10T20:33:05.987Z"
+     },
+     {
+      "qid": "occupation",
+      "module": "lifestyle",
+      "question": "நாளின் பெரும்பகுதி என்ன வேலை செய்கிறீர்கள்? உதாரணமாக: விவசாயம், தையல், வண்டி ஓட்டுதல், கடை, அலுவலகம் அல்லது கணினி வேலை, வீட்டு வேலை, அல்லது படிப்பு.",
+      "questionEn": "What work do you do for most of the day? For example: farming, tailoring, driving, a shop, office or computer work, housework, or studies.",
+      "reason": "Work sets how many hours go to near, arm’s-length and far vision, the core of the vision profile.",
+      "raw": "விவசாயம்",
+      "value": "farmer",
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "ta",
+      "at": "2026-11-10T20:33:06.002Z"
+     },
+     {
+      "qid": "near_hours",
+      "module": "lifestyle",
+      "question": "ஒரு சாதாரண நாளில் எத்தனை மணி நேரம் அருகில் பார்க்கும் வேலை செய்கிறீர்கள்: படிப்பது, போன், தையல் அல்லது நுணுக்கமான கைவேலை?",
+      "questionEn": "On a normal day, how many hours do you spend on close work: reading, the phone, sewing or fine handwork?",
+      "reason": "From the late 30s, hours of close work decide the reading add and the lens type.",
+      "raw": "ஒரு மணி நேரம்",
+      "value": 1,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "ta",
+      "at": "2026-11-10T20:33:06.002Z"
+     },
+     {
+      "qid": "drives",
+      "module": "lifestyle",
+      "question": "நீங்கள் வாகனம் அல்லது இருசக்கர வாகனம் ஓட்டுகிறீர்களா?",
+      "questionEn": "Do you drive a vehicle or ride a two-wheeler?",
+      "reason": "Driving needs sharp distance vision and wide side vision; it changes lens design and coating advice.",
+      "raw": "இல்லை",
+      "value": false,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "ta",
+      "at": "2026-11-10T20:33:06.002Z"
+     },
+     {
+      "qid": "night_glare",
+      "module": "lifestyle",
+      "question": "இரவில் வாகன விளக்குகள் அல்லது தெரு விளக்குகள் கண்ணைக் கூசச் செய்கின்றனவா, அல்லது நிறங்கள் மங்கலாகத் தெரிகின்றனவா?",
+      "questionEn": "At night, do headlights or street lights dazzle you, or do colours look dull and faded?",
+      "reason": "Glare and faded colours after 50 are early cataract signs.",
+      "raw": "ஆமா ராத்திரி லைட் கண்ணைக் கூசுது",
+      "value": true,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "ta",
+      "at": "2026-11-10T20:33:06.003Z"
+     },
+     {
+      "qid": "budget",
+      "module": "preference",
+      "question": "லென்ஸுக்கு எவ்வளவு செலவு செய்ய விரும்புகிறீர்கள்: ஆயிரம் ரூபாய்க்குக் குறைவாக, ஆயிரம் முதல் மூவாயிரம், அல்லது மூவாயிரத்திற்கு மேல்?",
+      "questionEn": "How much would you like to spend on the lenses: under one thousand rupees, one to three thousand, or more than three thousand?",
+      "reason": "Lens options for near-and-far needs range from low-cost bifocals to progressives; advice must be affordable to be followed.",
+      "raw": "ஆயிரம் ரூபாய்க்குக் குறைவாக",
+      "value": "low",
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "ta",
+      "at": "2026-11-10T20:33:06.005Z"
+     }
+    ],
+    "skipped": [],
+    "startedAt": "2026-11-10T20:33:05.971Z",
+    "finishedAt": "2026-11-10T20:33:06.005Z",
+    "asked": 14,
+    "bank": 30,
+    "notAsked": [
+     "rf_sudden_which",
+     "rf_pain_severe",
+     "child_white",
+     "child_squint",
+     "diabetes_years",
+     "retina_exam",
+     "glasses_type",
+     "glasses_years",
+     "glasses_ok",
+     "rx_known",
+     "frequent_change",
+     "screen_hours",
+     "outdoor_hours",
+     "child_board",
+     "parent_myopia",
+     "falls"
+    ]
+   },
+   "measurements": {
+    "acuity": {
+     "distanceM": 2,
+     "R": {
+      "logmar": 0.6,
+      "pinholeLogmar": 0.3,
+      "pinholeImproved": true
+     },
+     "L": {
+      "logmar": 0.8,
+      "pinholeLogmar": 0.8,
+      "pinholeImproved": false
+     }
+    },
+    "amsler": {
+     "R": "normal",
+     "L": "normal"
+    }
+   },
+   "profile": {
+    "derived": {
+     "age": 62,
+     "isChild": false,
+     "occ": "farmer",
+     "pseudophakic": false,
+     "presbyopeLikely": true,
+     "urgent": false,
+     "diabetic": false
+    },
+    "vision": {
+     "zones": {
+      "near": {
+       "hours": 1,
+       "share": 0.125,
+       "source": "reported",
+       "workingDistanceCm": 40,
+       "distanceSource": "typical for occupation",
+       "demandD": 2.5
+      },
+      "intermediate": {
+       "hours": 1,
+       "share": 0.125,
+       "source": "occupation",
+       "workingDistanceCm": 66,
+       "demandD": 1.5
+      },
+      "distance": {
+       "hours": 6,
+       "share": 0.75,
+       "source": "occupation"
+      }
+     },
+     "dominance": "distance",
+     "designEmphasis": "Balanced",
+     "inputsReported": 1,
+     "nearDistanceMeasured": false
+    },
+    "presbyopia": {
+     "status": "established",
+     "amplitudeD": 0,
+     "amplitudeSource": "age (Hofstetter minimum)",
+     "expectedAmplitudeD": {
+      "min": 0,
+      "avg": 0
+     },
+     "workingDistanceCm": 40,
+     "nearDemandD": 2.5,
+     "addD": 2.5,
+     "addRangeD": [
+      2.25,
+      2.75
+     ],
+     "intermediateAddD": 1.5,
+     "measuredNearPoint": false
+    },
+    "myopiaRisk": null,
+    "triage": {
+     "lane": "amber",
+     "flags": [
+      {
+       "lane": "amber",
+       "code": "CATARACT_SUSPECT",
+       "title": "Possible cataract",
+       "detail": "night glare or faded colours; reduced vision not improved by pinhole.",
+       "ref": "cataract",
+       "action": "Slit-lamp exam at the next camp or vision centre; cataract surgery restores sight better than new glasses."
+      }
+     ]
+    },
+    "recommendation": {
+     "category": "bifocal",
+     "title": "Bifocal (distance + near)",
+     "rationale": [
+      "Needs both distance and near within a low budget.",
+      "Estimated reading add about +2.50 D for 40 cm (age (Hofstetter minimum)). The optometrist confirms."
+     ],
+     "coatings": [
+      "Anti-reflective coating for night driving and glare",
+      "UV protection; photochromic lenses or sunglasses for long hours in the sun"
+     ],
+     "notes": [],
+     "centrationNeeded": true,
+     "example": null,
+     "decisionPath": [
+      {
+       "rule": "Red-flag lane",
+       "passed": false,
+       "detail": "lane amber"
+      },
+      {
+       "rule": "Child under 16",
+       "passed": false,
+       "detail": "age 62"
+      },
+      {
+       "rule": "Needs a reading add",
+       "passed": true,
+       "detail": "add +2.50 D at 40 cm, status established"
+      },
+      {
+       "rule": "Fall at 65+ and active outdoors",
+       "passed": false,
+       "detail": "age 62, fall no, distance 75% of day"
+      },
+      {
+       "rule": "Mostly close work, little else (near ≥50%, others <25%, no distance complaint)",
+       "passed": false,
+       "detail": "near 13%, arm’s length 13%, distance 75%, distance complaint yes"
+      },
+      {
+       "rule": "Arm’s-length work dominates, or close + arm’s length ≥75%",
+       "passed": false,
+       "detail": "dominance distance, close + arm’s length 25%, distance 75%"
+      },
+      {
+       "rule": "Low budget, or already comfortable in bifocals",
+       "passed": true,
+       "detail": "budget low, current glasses none"
+      }
+     ]
+    },
+    "advice": [
+     "uv_sunglasses"
+    ],
+    "checks": [
+     "reading_distance",
+     "near_point",
+     "acuity",
+     "amsler",
+     "pd"
+    ],
+    "quality": {
+     "items": [
+      {
+       "key": "zones",
+       "label": "Daily hours reported by the patient",
+       "value": "1 of 3 (rest from occupation)",
+       "ok": false
+      },
+      {
+       "key": "nearDistance",
+       "label": "Near working distance",
+       "value": "typical for occupation (not measured)",
+       "ok": false
+      },
+      {
+       "key": "amplitude",
+       "label": "Focusing range",
+       "value": "age (Hofstetter minimum)",
+       "ok": false
+      },
+      {
+       "key": "acuity",
+       "label": "Eye-chart letter size",
+       "value": "screen not calibrated: sizes approximate",
+       "ok": false
+      },
+      {
+       "key": "answers",
+       "label": "Answers",
+       "value": "14 by voice, 0 by tap",
+       "ok": true
+      }
+     ],
+     "level": "low"
+    },
+    "rulesVersion": "2026.11-r2",
+    "summary": "62y · farmer · distance-dominant · add ~+2.50 · Bifocal (distance + near)"
+   },
+   "rulesVersion": "2026.11-r2",
+   "passport": {
+    "lang": "ta",
+    "text": "திவ்யதிருஷ்டி பார்வை பாஸ்போர்ட் · DD-FF6D1F\nK. Murugan · 11/11/2026\nஉங்கள் கண்கள் பெரும்பாலும் பயன்படுவது: தூரப் பார்வை (வெளியே, வாகனம் ஓட்டுதல், முகங்கள்).\nபரிந்துரை: பைஃபோகல் கண்ணாடி (தூரம் + படித்தல்) (add +2.50).\nஒரு ஆப்டோமெட்ரிஸ்ட் ஒரு நாளுக்குள் உங்கள் முடிவுகளைப் பார்த்து, முழு கண் பரிசோதனை எங்கே, எப்போது என்று சொல்வார்.\nஇதுவும் தேவை: கண்புரைப் பரிசோதனை.\nஆலோசனைகள்: கடும் வெயிலில் UV பாதுகாப்பு உள்ள கருப்புக் கண்ணாடி அல்லது அகன்ற தொப்பி அணியுங்கள்.\nஇந்தச் செய்தியை எந்த கண்ணாடிக் கடை அல்லது கண் முகாமிலும் காட்டுங்கள்."
+   }
+  },
+  "receivedMinutesAgo": 190
+ },
+ {
+  "case": {
+   "id": "e5e39d7c-2c6b-4316-a484-c489409bcae3",
+   "createdAt": "2026-11-10T19:35:06.005Z",
+   "appVersion": "0.2.0",
+   "lang": "hi",
+   "demo": true,
+   "site": {
+    "name": "Chennai Optics, Velachery",
+    "type": "store"
+   },
+   "operator": "Store owner (demo)",
+   "patient": {
+    "name": "Priya (child of A. Devi)",
+    "phone": "+91 99620 00718",
+    "village": "Tambaram 600045",
+    "age": 9,
+    "sex": "female"
+   },
+   "consent": {
+    "given": true,
+    "at": "2026-11-10T19:35:06.005Z",
+    "lang": "hi",
+    "textVersion": "consent-v1",
+    "method": "demo"
+   },
+   "interview": {
+    "answers": {
+     "age": 9,
+     "sex": "female",
+     "complaint": [
+      "far_blur"
+     ],
+     "rf_sudden": false,
+     "rf_pain": false,
+     "child_white": false,
+     "child_squint": false,
+     "glasses_now": false,
+     "near_hours": 4,
+     "outdoor_hours": 0.5,
+     "child_board": true,
+     "parent_myopia": "both",
+     "budget": "mid"
+    },
+    "trace": [
+     {
+      "qid": "age",
+      "module": "core",
+      "question": "आपकी उम्र कितनी है?",
+      "questionEn": "How old are you?",
+      "reason": "Age sets which eye changes to look for: myopia in children, presbyopia after 40, cataract after 50.",
+      "raw": "नौ साल",
+      "value": 9,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "hi",
+      "at": "2026-11-10T20:33:06.005Z"
+     },
+     {
+      "qid": "sex",
+      "module": "core",
+      "question": "आप महिला हैं या पुरुष?",
+      "questionEn": "Are you female or male?",
+      "reason": "Needed for the record; some conditions differ by sex (angle-closure glaucoma is more common in women).",
+      "raw": "लड़की",
+      "value": "female",
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "hi",
+      "at": "2026-11-10T20:33:06.007Z"
+     },
+     {
+      "qid": "complaint",
+      "module": "core",
+      "question": "आज आप किस वजह से आए हैं? जैसे दूर का धुंधला दिखना, पास का धुंधला दिखना, सिरदर्द या आँखों में थकान, या सिर्फ़ जाँच।",
+      "questionEn": "What brings you here today? For example: blurry far away, blurry up close, headache or tired eyes, or just a check-up.",
+      "reason": "The main complaint decides which tests and follow-up questions matter.",
+      "raw": "दूर का धुंधला दिखता है",
+      "value": [
+       "far_blur"
+      ],
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "hi",
+      "at": "2026-11-10T20:33:06.015Z"
+     },
+     {
+      "qid": "rf_sudden",
+      "module": "redflag",
+      "question": "पिछले कुछ हफ़्तों में क्या आपकी नज़र अचानक कम हुई है, या रोशनी की चमक, पर्दे जैसी काली परछाई, या दोहरा दिखाई दिया है?",
+      "questionEn": "In the last few weeks, has your sight suddenly got worse, or have you seen flashes of light, a dark shadow like a curtain, or double vision?",
+      "reason": "Sudden loss, flashes, a curtain or new double vision can mean retinal detachment, a blocked vessel or a stroke: same-day referral.",
+      "raw": "नहीं",
+      "value": false,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "hi",
+      "at": "2026-11-10T20:33:06.019Z"
+     },
+     {
+      "qid": "rf_pain",
+      "module": "redflag",
+      "question": "क्या अभी आपकी आँख में दर्द, लाली, या कोई चोट है?",
+      "questionEn": "Do you have eye pain, redness, or an eye injury right now?",
+      "reason": "A painful red eye or an injury needs a doctor, not new glasses.",
+      "raw": "नहीं",
+      "value": false,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "hi",
+      "at": "2026-11-10T20:33:06.019Z"
+     },
+     {
+      "qid": "child_white",
+      "module": "child",
+      "question": "क्या आपने कभी बच्चे की आँख में बिल्ली की आँख जैसी सफ़ेद चमक देखी है, सामने या फ़ोटो में?",
+      "questionEn": "Have you ever seen a white glow, like a cat’s eye, in the child’s eye, in person or in a photo?",
+      "reason": "A white pupil glow (leukocoria) can be childhood cataract or retinoblastoma: urgent referral.",
+      "raw": "नहीं",
+      "value": false,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "hi",
+      "at": "2026-11-10T20:33:06.019Z"
+     },
+     {
+      "qid": "child_squint",
+      "module": "child",
+      "question": "क्या बच्चे की एक आँख अंदर या बाहर मुड़ती है, या देखने के लिए बच्चा सिर टेढ़ा करता है या एक आँख बंद करता है?",
+      "questionEn": "Does one of the child’s eyes turn in or out, or does the child tilt their head or close one eye to see?",
+      "reason": "A squint or head tilt can mean amblyopia (lazy eye), which can only be treated in childhood.",
+      "raw": "नहीं",
+      "value": false,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "hi",
+      "at": "2026-11-10T20:33:06.020Z"
+     },
+     {
+      "qid": "glasses_now",
+      "module": "glasses",
+      "question": "क्या आप अभी चश्मा पहनते हैं?",
+      "questionEn": "Do you wear glasses now?",
+      "reason": "Current glasses show the past prescription and what is or isn’t working.",
+      "raw": "नहीं",
+      "value": false,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "hi",
+      "at": "2026-11-10T20:33:06.020Z"
+     },
+     {
+      "qid": "near_hours",
+      "module": "lifestyle",
+      "question": "बच्चा दिन में कितने घंटे होमवर्क, किताबों, या मोबाइल-टैबलेट पर बिताता है?",
+      "questionEn": "How many hours a day does the child spend on homework, books, or a phone or tablet?",
+      "reason": "More than about 3 hours of close work a day raises a child’s myopia risk.",
+      "raw": "चार घंटे",
+      "value": 4,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "hi",
+      "at": "2026-11-10T20:33:06.021Z"
+     },
+     {
+      "qid": "outdoor_hours",
+      "module": "lifestyle",
+      "question": "बच्चा दिन में कितने घंटे बाहर दिन की रोशनी में खेलता या समय बिताता है?",
+      "questionEn": "How many hours a day does the child play or spend time outdoors in daylight?",
+      "reason": "Daylight outdoors protects against myopia; children with under 2 hours a day are at higher risk.",
+      "raw": "आधा घंटा",
+      "value": 0.5,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "hi",
+      "at": "2026-11-10T20:33:06.021Z"
+     },
+     {
+      "qid": "child_board",
+      "module": "child",
+      "question": "क्या बच्चे को स्कूल में बोर्ड पढ़ने में दिक्कत होती है, या वह टीवी के बहुत पास बैठता है?",
+      "questionEn": "Does the child have trouble reading the board at school, or sit very close to the TV?",
+      "reason": "The classic early sign of myopia in school children.",
+      "raw": "हाँ",
+      "value": true,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "hi",
+      "at": "2026-11-10T20:33:06.022Z"
+     },
+     {
+      "qid": "parent_myopia",
+      "module": "child",
+      "question": "क्या बच्चे के माता-पिता दूर देखने के लिए चश्मा पहनते हैं? कोई नहीं, एक, या दोनों?",
+      "questionEn": "Do the child’s parents wear glasses for seeing far? Neither, one parent, or both?",
+      "reason": "Myopia risk rises with one short-sighted parent and more with two.",
+      "raw": "दोनों",
+      "value": "both",
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "hi",
+      "at": "2026-11-10T20:33:06.023Z"
+     },
+     {
+      "qid": "budget",
+      "module": "preference",
+      "question": "आप लेंस पर कितना खर्च करना चाहेंगे: एक हज़ार रुपये से कम, एक से तीन हज़ार, या तीन हज़ार से ज़्यादा?",
+      "questionEn": "How much would you like to spend on the lenses: under one thousand rupees, one to three thousand, or more than three thousand?",
+      "reason": "Lens options for near-and-far needs range from low-cost bifocals to progressives; advice must be affordable to be followed.",
+      "raw": "एक से तीन हज़ार",
+      "value": "mid",
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "hi",
+      "at": "2026-11-10T20:33:06.024Z"
+     }
+    ],
+    "skipped": [],
+    "startedAt": "2026-11-10T20:33:06.005Z",
+    "finishedAt": "2026-11-10T20:33:06.024Z",
+    "asked": 13,
+    "bank": 30,
+    "notAsked": [
+     "rf_sudden_which",
+     "rf_pain_severe",
+     "conditions",
+     "diabetes_years",
+     "retina_exam",
+     "glaucoma_family",
+     "eye_surgery",
+     "glasses_type",
+     "glasses_years",
+     "glasses_ok",
+     "rx_known",
+     "frequent_change",
+     "occupation",
+     "screen_hours",
+     "drives",
+     "night_glare",
+     "falls"
+    ]
+   },
+   "measurements": {
+    "readingDistanceCm": 22,
+    "acuity": {
+     "distanceM": 2,
+     "R": {
+      "logmar": 0.5
+     },
+     "L": {
+      "logmar": 0.6
+     }
+    }
+   },
+   "profile": {
+    "derived": {
+     "age": 9,
+     "isChild": true,
+     "occ": "student",
+     "pseudophakic": false,
+     "presbyopeLikely": false,
+     "urgent": false,
+     "diabetic": false
+    },
+    "vision": {
+     "zones": {
+      "near": {
+       "hours": 4,
+       "share": 0.6666666666666666,
+       "source": "reported",
+       "workingDistanceCm": 22,
+       "distanceSource": "measured",
+       "demandD": 4.5
+      },
+      "intermediate": {
+       "hours": 1,
+       "share": 0.16666666666666666,
+       "source": "assumed",
+       "workingDistanceCm": 66,
+       "demandD": 1.5
+      },
+      "distance": {
+       "hours": 1,
+       "share": 0.16666666666666666,
+       "source": "reported"
+      }
+     },
+     "dominance": "near",
+     "designEmphasis": "Near",
+     "inputsReported": 2,
+     "nearDistanceMeasured": true
+    },
+    "presbyopia": null,
+    "myopiaRisk": {
+     "score": 9,
+     "level": "high",
+     "factors": [
+      "outdoors only 0.5 h/day (under 2 h)",
+      "4 h/day of close work",
+      "both parents short-sighted",
+      "holds books/phone at 22 cm (measured)",
+      "trouble seeing the school board",
+      "younger child: faster progression if myopia starts early"
+     ]
+    },
+    "triage": {
+     "lane": "amber",
+     "flags": [
+      {
+       "lane": "amber",
+       "code": "CHILD_REFRACTION",
+       "title": "Child likely needs glasses",
+       "detail": "Difficulty with the school board. Children need cycloplegic refraction; phone estimates are unsafe.",
+       "ref": "child_refraction",
+       "action": "Cycloplegic refraction by an optometrist."
+      }
+     ]
+    },
+    "recommendation": {
+     "category": "child_refraction",
+     "title": "Cycloplegic refraction, then single-vision lenses",
+     "rationale": [
+      "Children’s focusing is strong enough to hide long-sightedness; only a dilated (cycloplegic) refraction gives the true power.",
+      "Myopia risk high: outdoors only 0.5 h/day (under 2 h); 4 h/day of close work; both parents short-sighted; holds books/phone at 22 cm (measured); trouble seeing the school board; younger child: faster progression if myopia starts early."
+     ],
+     "coatings": [
+      "Polycarbonate or other impact-resistant material for children"
+     ],
+     "notes": [
+      "If myopia is confirmed and progressing, discuss myopia-management lenses with the optometrist."
+     ],
+     "centrationNeeded": false,
+     "example": "e.g. ZEISS MyoCare (ages 6-12), after confirmation by the optometrist",
+     "decisionPath": [
+      {
+       "rule": "Red-flag lane",
+       "passed": false,
+       "detail": "lane amber"
+      },
+      {
+       "rule": "Child under 16",
+       "passed": true,
+       "detail": "age 9"
+      }
+     ]
+    },
+    "advice": [
+     "rule_20_20_20",
+     "outdoor_2h"
+    ],
+    "checks": [
+     "reading_distance",
+     "acuity"
+    ],
+    "quality": {
+     "items": [
+      {
+       "key": "zones",
+       "label": "Daily hours reported by the patient",
+       "value": "2 of 3 (rest from occupation)",
+       "ok": true
+      },
+      {
+       "key": "nearDistance",
+       "label": "Near working distance",
+       "value": "measured, uncalibrated camera (±15%)",
+       "ok": true
+      },
+      {
+       "key": "acuity",
+       "label": "Eye-chart letter size",
+       "value": "screen not calibrated: sizes approximate",
+       "ok": false
+      },
+      {
+       "key": "answers",
+       "label": "Answers",
+       "value": "13 by voice, 0 by tap",
+       "ok": true
+      }
+     ],
+     "level": "high"
+    },
+    "rulesVersion": "2026.11-r2",
+    "summary": "9y · student · near-dominant · Cycloplegic refraction, then single-vision lenses"
+   },
+   "rulesVersion": "2026.11-r2",
+   "passport": {
+    "lang": "hi",
+    "text": "दिव्यदृष्टि विज़न पासपोर्ट · DD-E5E39D\nPriya (child of A. Devi) · 11/11/2026\nआपकी आँखें ज़्यादातर इसके लिए इस्तेमाल होती हैं: पास का काम (पढ़ना, मोबाइल, सिलाई).\nसुझाव: ऑप्टोमेट्रिस्ट से दवा डालकर पूरी जाँच, फिर चश्मा.\nएक ऑप्टोमेट्रिस्ट एक दिन में आपके नतीजे देखकर बताएँगे कि पूरी जाँच कहाँ और कब करवानी है।\nयह भी ज़रूरी: बच्चे की पूरी आँखों की जाँच.\nसलाह: हर 20 मिनट पास के काम या स्क्रीन के बाद, 20 सेकंड तक 6 मीटर दूर देखें। बच्चे रोज़ कम से कम 2 घंटे बाहर दिन की रोशनी में खेलें; इससे दूर की नज़र कमज़ोर होने से बचाव होता है।\nयह संदेश किसी भी चश्मे की दुकान या आँखों के कैंप में दिखाएँ।"
+   }
+  },
+  "receivedMinutesAgo": 50
+ },
+ {
+  "case": {
+   "id": "641898ff-e4dc-42eb-a849-cd626c0d62a7",
+   "createdAt": "2026-11-10T20:00:06.025Z",
+   "appVersion": "0.2.0",
+   "lang": "hi",
+   "demo": true,
+   "site": {
+    "name": "Eye camp, Kanchipuram",
+    "type": "camp"
+   },
+   "operator": "Camp volunteer (demo)",
+   "patient": {
+    "name": "M. Ravi",
+    "phone": "+91 90030 00962",
+    "village": "Guduvanchery 603202",
+    "age": 58,
+    "sex": "male"
+   },
+   "consent": {
+    "given": true,
+    "at": "2026-11-10T20:00:06.025Z",
+    "lang": "hi",
+    "textVersion": "consent-v1",
+    "method": "demo"
+   },
+   "interview": {
+    "answers": {
+     "age": 58,
+     "sex": "male",
+     "complaint": [
+      "far_blur"
+     ],
+     "rf_sudden": true,
+     "rf_sudden_which": [
+      "curtain"
+     ],
+     "rf_pain": false,
+     "conditions": [
+      "diabetes"
+     ]
+    },
+    "trace": [
+     {
+      "qid": "age",
+      "module": "core",
+      "question": "आपकी उम्र कितनी है?",
+      "questionEn": "How old are you?",
+      "reason": "Age sets which eye changes to look for: myopia in children, presbyopia after 40, cataract after 50.",
+      "raw": "अट्ठावन",
+      "value": 58,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "hi",
+      "at": "2026-11-10T20:33:06.025Z"
+     },
+     {
+      "qid": "sex",
+      "module": "core",
+      "question": "आप महिला हैं या पुरुष?",
+      "questionEn": "Are you female or male?",
+      "reason": "Needed for the record; some conditions differ by sex (angle-closure glaucoma is more common in women).",
+      "raw": "पुरुष",
+      "value": "male",
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "hi",
+      "at": "2026-11-10T20:33:06.026Z"
+     },
+     {
+      "qid": "complaint",
+      "module": "core",
+      "question": "आज आप किस वजह से आए हैं? जैसे दूर का धुंधला दिखना, पास का धुंधला दिखना, सिरदर्द या आँखों में थकान, या सिर्फ़ जाँच।",
+      "questionEn": "What brings you here today? For example: blurry far away, blurry up close, headache or tired eyes, or just a check-up.",
+      "reason": "The main complaint decides which tests and follow-up questions matter.",
+      "raw": "दूर का धुंधला",
+      "value": [
+       "far_blur"
+      ],
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "hi",
+      "at": "2026-11-10T20:33:06.031Z"
+     },
+     {
+      "qid": "rf_sudden",
+      "module": "redflag",
+      "question": "पिछले कुछ हफ़्तों में क्या आपकी नज़र अचानक कम हुई है, या रोशनी की चमक, पर्दे जैसी काली परछाई, या दोहरा दिखाई दिया है?",
+      "questionEn": "In the last few weeks, has your sight suddenly got worse, or have you seen flashes of light, a dark shadow like a curtain, or double vision?",
+      "reason": "Sudden loss, flashes, a curtain or new double vision can mean retinal detachment, a blocked vessel or a stroke: same-day referral.",
+      "raw": "हाँ अचानक काला पर्दा सा आ गया",
+      "value": true,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "hi",
+      "at": "2026-11-10T20:33:06.032Z"
+     },
+     {
+      "event": "urgent_mode",
+      "at": "2026-11-10T20:33:06.032Z",
+      "reason": "Red flag: remaining lifestyle questions dropped."
+     },
+     {
+      "qid": "rf_sudden_which",
+      "module": "redflag",
+      "question": "इनमें से क्या हुआ? अचानक धुंधलापन, चमक या तैरते धब्बे, परछाई या पर्दा, या दोहरा दिखना?",
+      "questionEn": "Which of these happened? Sudden blur, flashes or floating spots, a shadow or curtain, or double vision?",
+      "reason": "The type of sudden change tells the receiving doctor whether to expect a retinal or a neurological emergency.",
+      "raw": "काला पर्दा",
+      "value": [
+       "curtain"
+      ],
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "hi",
+      "at": "2026-11-10T20:33:06.033Z"
+     },
+     {
+      "qid": "rf_pain",
+      "module": "redflag",
+      "question": "क्या अभी आपकी आँख में दर्द, लाली, या कोई चोट है?",
+      "questionEn": "Do you have eye pain, redness, or an eye injury right now?",
+      "reason": "A painful red eye or an injury needs a doctor, not new glasses.",
+      "raw": "नहीं",
+      "value": false,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "hi",
+      "at": "2026-11-10T20:33:06.034Z"
+     },
+     {
+      "qid": "conditions",
+      "module": "medical",
+      "question": "क्या आपको शुगर (डायबिटीज़), हाई बीपी, या थायरॉइड की समस्या है?",
+      "questionEn": "Do you have diabetes, high blood pressure, or a thyroid problem?",
+      "reason": "Diabetes damages the retina silently and makes glasses power fluctuate; blood pressure and thyroid disease also affect the eyes.",
+      "raw": "शुगर है",
+      "value": [
+       "diabetes"
+      ],
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "hi",
+      "at": "2026-11-10T20:33:06.036Z"
+     }
+    ],
+    "skipped": [],
+    "startedAt": "2026-11-10T20:33:06.025Z",
+    "finishedAt": "2026-11-10T20:33:06.036Z",
+    "asked": 7,
+    "bank": 30,
+    "notAsked": [
+     "rf_pain_severe",
+     "child_white",
+     "child_squint",
+     "diabetes_years",
+     "retina_exam",
+     "glaucoma_family",
+     "eye_surgery",
+     "glasses_now",
+     "glasses_type",
+     "glasses_years",
+     "glasses_ok",
+     "rx_known",
+     "frequent_change",
+     "occupation",
+     "near_hours",
+     "screen_hours",
+     "outdoor_hours",
+     "child_board",
+     "parent_myopia",
+     "drives",
+     "night_glare",
+     "falls",
+     "budget"
+    ]
+   },
+   "measurements": {
+    "acuity": {
+     "distanceM": 2,
+     "R": {
+      "logmar": 1.1
+     },
+     "L": {
+      "logmar": 0.2
+     }
+    }
+   },
+   "profile": {
+    "derived": {
+     "age": 58,
+     "isChild": false,
+     "occ": null,
+     "pseudophakic": false,
+     "presbyopeLikely": true,
+     "urgent": true,
+     "diabetic": true
+    },
+    "vision": {
+     "zones": {
+      "near": {
+       "hours": 2,
+       "share": 0.2857142857142857,
+       "source": "occupation",
+       "workingDistanceCm": 40,
+       "distanceSource": "typical for occupation",
+       "demandD": 2.5
+      },
+      "intermediate": {
+       "hours": 2,
+       "share": 0.2857142857142857,
+       "source": "occupation",
+       "workingDistanceCm": 66,
+       "demandD": 1.5
+      },
+      "distance": {
+       "hours": 3,
+       "share": 0.42857142857142855,
+       "source": "occupation"
+      }
+     },
+     "dominance": "balanced",
+     "designEmphasis": "Balanced",
+     "inputsReported": 0,
+     "nearDistanceMeasured": false
+    },
+    "presbyopia": {
+     "status": "established",
+     "amplitudeD": 0.5,
+     "amplitudeSource": "age (Hofstetter minimum)",
+     "expectedAmplitudeD": {
+      "min": 0.5,
+      "avg": 1.1
+     },
+     "workingDistanceCm": 40,
+     "nearDemandD": 2.5,
+     "addD": 2.25,
+     "addRangeD": [
+      2,
+      2.5
+     ],
+     "intermediateAddD": 1.25,
+     "measuredNearPoint": false
+    },
+    "myopiaRisk": null,
+    "triage": {
+     "lane": "red",
+     "flags": [
+      {
+       "lane": "red",
+       "code": "SUDDEN_VISION_CHANGE",
+       "title": "Sudden change in vision",
+       "detail": "Reported: curtain. Possible retinal detachment, vascular occlusion or neurological cause.",
+       "ref": "redflags",
+       "action": "Same-day ophthalmologist. Do not dispense glasses today."
+      },
+      {
+       "lane": "amber",
+       "code": "SEVERE_VI",
+       "title": "Vision worse than 6/60 in at least one eye",
+       "detail": "Severe visual impairment or worse.",
+       "ref": "who_vi",
+       "action": "Full eye examination; check for cataract."
+      }
+     ]
+    },
+    "recommendation": {
+     "category": "urgent_referral",
+     "title": "No glasses today: urgent referral",
+     "rationale": [
+      "A red-flag symptom needs a doctor first; new glasses could delay care."
+     ],
+     "coatings": [],
+     "notes": [],
+     "centrationNeeded": false,
+     "example": null,
+     "decisionPath": [
+      {
+       "rule": "Red-flag lane",
+       "passed": true,
+       "detail": "lane red"
+      }
+     ]
+    },
+    "advice": [
+     "diabetes_yearly"
+    ],
+    "checks": [
+     "acuity",
+     "amsler"
+    ],
+    "quality": {
+     "items": [
+      {
+       "key": "zones",
+       "label": "Daily hours reported by the patient",
+       "value": "0 of 3 (rest from occupation)",
+       "ok": false
+      },
+      {
+       "key": "nearDistance",
+       "label": "Near working distance",
+       "value": "typical for occupation (not measured)",
+       "ok": false
+      },
+      {
+       "key": "amplitude",
+       "label": "Focusing range",
+       "value": "age (Hofstetter minimum)",
+       "ok": false
+      },
+      {
+       "key": "acuity",
+       "label": "Eye-chart letter size",
+       "value": "screen not calibrated: sizes approximate",
+       "ok": false
+      },
+      {
+       "key": "answers",
+       "label": "Answers",
+       "value": "7 by voice, 0 by tap",
+       "ok": true
+      }
+     ],
+     "level": "low"
+    },
+    "rulesVersion": "2026.11-r2",
+    "summary": "58y · balanced · add ~+2.25 · No glasses today: urgent referral"
+   },
+   "rulesVersion": "2026.11-r2",
+   "passport": {
+    "lang": "hi",
+    "text": "दिव्यदृष्टि विज़न पासपोर्ट · DD-641898\nM. Ravi · 11/11/2026\nआपकी आँखें ज़्यादातर इसके लिए इस्तेमाल होती हैं: पास, हाथ भर और दूर, तीनों का मिश्रण.\nसुझाव: आज चश्मा नहीं: पहले डॉक्टर को दिखाएँ.\nकृपया आज ही आँखों के अस्पताल जाएँ। नए चश्मे का इंतज़ार न करें।\nयह भी ज़रूरी: नज़र में अचानक बदलाव के लिए डॉक्टर; आँखों की पूरी जाँच.\nसलाह: शुगर हो तो हर साल एक बार आँखों में दवा डालकर पर्दे की जाँच करवाएँ, चाहे साफ़ दिखता हो।\nयह संदेश किसी भी चश्मे की दुकान या आँखों के कैंप में दिखाएँ।"
+   }
+  },
+  "receivedMinutesAgo": 25
+ },
+ {
+  "case": {
+   "id": "fc001e3d-1f4b-4830-a4de-94e67c0e6451",
+   "createdAt": "2026-11-10T14:55:06.037Z",
+   "appVersion": "0.2.0",
+   "lang": "en",
+   "demo": true,
+   "site": {
+    "name": "Chennai Optics, Velachery",
+    "type": "store"
+   },
+   "operator": "Store owner (demo)",
+   "patient": {
+    "name": "A. Fatima",
+    "phone": "+91 98410 00233",
+    "village": "Pallavaram 600043",
+    "age": 68,
+    "sex": "female"
+   },
+   "consent": {
+    "given": true,
+    "at": "2026-11-10T14:55:06.037Z",
+    "lang": "en",
+    "textVersion": "consent-v1",
+    "method": "demo"
+   },
+   "interview": {
+    "answers": {
+     "age": 68,
+     "sex": "female",
+     "complaint": [
+      "near_blur"
+     ],
+     "rf_sudden": false,
+     "rf_pain": false,
+     "conditions": [
+      "bp"
+     ],
+     "glaucoma_family": false,
+     "eye_surgery": "cataract",
+     "glasses_now": true,
+     "glasses_type": "bifocal",
+     "glasses_years": 5,
+     "glasses_ok": "near_blur",
+     "rx_known": {
+      "skipped": true
+     },
+     "frequent_change": false,
+     "occupation": "homemaker",
+     "near_hours": 3,
+     "outdoor_hours": 2,
+     "drives": false,
+     "night_glare": false,
+     "falls": true,
+     "budget": "mid"
+    },
+    "trace": [
+     {
+      "qid": "age",
+      "module": "core",
+      "question": "How old are you?",
+      "questionEn": "How old are you?",
+      "reason": "Age sets which eye changes to look for: myopia in children, presbyopia after 40, cataract after 50.",
+      "raw": "68",
+      "value": 68,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:06.037Z"
+     },
+     {
+      "qid": "sex",
+      "module": "core",
+      "question": "Are you female or male?",
+      "questionEn": "Are you female or male?",
+      "reason": "Needed for the record; some conditions differ by sex (angle-closure glaucoma is more common in women).",
+      "raw": "female",
+      "value": "female",
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:06.038Z"
+     },
+     {
+      "qid": "complaint",
+      "module": "core",
+      "question": "What brings you here today? For example: blurry far away, blurry up close, headache or tired eyes, or just a check-up.",
+      "questionEn": "What brings you here today? For example: blurry far away, blurry up close, headache or tired eyes, or just a check-up.",
+      "reason": "The main complaint decides which tests and follow-up questions matter.",
+      "raw": "I cannot read the newspaper",
+      "value": [
+       "near_blur"
+      ],
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:06.043Z"
+     },
+     {
+      "qid": "rf_sudden",
+      "module": "redflag",
+      "question": "In the last few weeks, has your sight suddenly got worse, or have you seen flashes of light, a dark shadow like a curtain, or double vision?",
+      "questionEn": "In the last few weeks, has your sight suddenly got worse, or have you seen flashes of light, a dark shadow like a curtain, or double vision?",
+      "reason": "Sudden loss, flashes, a curtain or new double vision can mean retinal detachment, a blocked vessel or a stroke: same-day referral.",
+      "raw": "no",
+      "value": false,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:06.043Z"
+     },
+     {
+      "qid": "rf_pain",
+      "module": "redflag",
+      "question": "Do you have eye pain, redness, or an eye injury right now?",
+      "questionEn": "Do you have eye pain, redness, or an eye injury right now?",
+      "reason": "A painful red eye or an injury needs a doctor, not new glasses.",
+      "raw": "no",
+      "value": false,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:06.044Z"
+     },
+     {
+      "qid": "conditions",
+      "module": "medical",
+      "question": "Do you have diabetes, high blood pressure, or a thyroid problem?",
+      "questionEn": "Do you have diabetes, high blood pressure, or a thyroid problem?",
+      "reason": "Diabetes damages the retina silently and makes glasses power fluctuate; blood pressure and thyroid disease also affect the eyes.",
+      "raw": "blood pressure",
+      "value": [
+       "bp"
+      ],
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:06.046Z"
+     },
+     {
+      "qid": "glaucoma_family",
+      "module": "medical",
+      "question": "Does your mother, father, brother or sister have glaucoma, the eye pressure disease?",
+      "questionEn": "Does your mother, father, brother or sister have glaucoma, the eye pressure disease?",
+      "reason": "Glaucoma runs in families and steals sight painlessly; relatives over 40 need an eye-pressure and optic-nerve check.",
+      "raw": "no",
+      "value": false,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:06.048Z"
+     },
+     {
+      "qid": "eye_surgery",
+      "module": "medical",
+      "question": "Have you had cataract surgery, or any other eye operation?",
+      "questionEn": "Have you had cataract surgery, or any other eye operation?",
+      "reason": "After cataract surgery the eye cannot focus up close, so near glasses are needed whatever the age.",
+      "raw": "cataract surgery in both eyes",
+      "value": "cataract",
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:06.049Z"
+     },
+     {
+      "qid": "glasses_now",
+      "module": "glasses",
+      "question": "Do you wear glasses now?",
+      "questionEn": "Do you wear glasses now?",
+      "reason": "Current glasses show the past prescription and what is or isn’t working.",
+      "raw": "yes",
+      "value": true,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:06.050Z"
+     },
+     {
+      "qid": "glasses_type",
+      "module": "glasses",
+      "question": "What kind are they: for distance, for reading, bifocal with a line, or progressive with no line?",
+      "questionEn": "What kind are they: for distance, for reading, bifocal with a line, or progressive with no line?",
+      "reason": "Tells us which zones the patient already relies on, and whether they have adapted to multifocals before.",
+      "raw": "bifocal",
+      "value": "bifocal",
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:06.052Z"
+     },
+     {
+      "qid": "glasses_years",
+      "module": "glasses",
+      "question": "How old are your current glasses, in years?",
+      "questionEn": "How old are your current glasses, in years?",
+      "reason": "Prescriptions older than about two years are often out of date, especially after 40.",
+      "raw": "five",
+      "value": 5,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:06.052Z"
+     },
+     {
+      "qid": "glasses_ok",
+      "module": "glasses",
+      "question": "With these glasses, how do you see: fine, blurry far away, blurry up close, or do they give you headaches?",
+      "questionEn": "With these glasses, how do you see: fine, blurry far away, blurry up close, or do they give you headaches?",
+      "reason": "Separates an outdated prescription from a wrong lens type or a poor fit.",
+      "raw": "near is blurry",
+      "value": "near_blur",
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:06.055Z"
+     },
+     {
+      "qid": "rx_known",
+      "module": "glasses",
+      "question": "If you have the prescription slip, read it out. For example: right eye minus one point five, cylinder minus point five, axis ninety. Or say skip.",
+      "questionEn": "If you have the prescription slip, read it out. For example: right eye minus one point five, cylinder minus point five, axis ninety. Or say skip.",
+      "reason": "A known prescription is the best starting point; it is checked against valid lens steps and for big differences between the eyes.",
+      "raw": "skip",
+      "value": {
+       "skipped": true
+      },
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:06.055Z"
+     },
+     {
+      "qid": "frequent_change",
+      "module": "glasses",
+      "question": "In the last two years, have you needed new glasses more than once because the power kept changing?",
+      "questionEn": "In the last two years, have you needed new glasses more than once because the power kept changing?",
+      "reason": "Power that keeps changing can signal a developing cataract or uncontrolled diabetes.",
+      "raw": "no",
+      "value": false,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:06.055Z"
+     },
+     {
+      "qid": "occupation",
+      "module": "lifestyle",
+      "question": "What work do you do for most of the day? For example: farming, tailoring, driving, a shop, office or computer work, housework, or studies.",
+      "questionEn": "What work do you do for most of the day? For example: farming, tailoring, driving, a shop, office or computer work, housework, or studies.",
+      "reason": "Work sets how many hours go to near, arm’s-length and far vision, the core of the vision profile.",
+      "raw": "housewife",
+      "value": "homemaker",
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:06.069Z"
+     },
+     {
+      "qid": "near_hours",
+      "module": "lifestyle",
+      "question": "On a normal day, how many hours do you spend on close work: reading, the phone, sewing or fine handwork?",
+      "questionEn": "On a normal day, how many hours do you spend on close work: reading, the phone, sewing or fine handwork?",
+      "reason": "From the late 30s, hours of close work decide the reading add and the lens type.",
+      "raw": "three hours",
+      "value": 3,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:06.069Z"
+     },
+     {
+      "qid": "outdoor_hours",
+      "module": "lifestyle",
+      "question": "How many hours a day are you outdoors in daylight?",
+      "questionEn": "How many hours a day are you outdoors in daylight?",
+      "reason": "Long hours in sunlight call for UV protection and possibly photochromic lenses.",
+      "raw": "two hours",
+      "value": 2,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:06.069Z"
+     },
+     {
+      "qid": "drives",
+      "module": "lifestyle",
+      "question": "Do you drive a vehicle or ride a two-wheeler?",
+      "questionEn": "Do you drive a vehicle or ride a two-wheeler?",
+      "reason": "Driving needs sharp distance vision and wide side vision; it changes lens design and coating advice.",
+      "raw": "no",
+      "value": false,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:06.070Z"
+     },
+     {
+      "qid": "night_glare",
+      "module": "lifestyle",
+      "question": "At night, do headlights or street lights dazzle you, or do colours look dull and faded?",
+      "questionEn": "At night, do headlights or street lights dazzle you, or do colours look dull and faded?",
+      "reason": "Glare and faded colours after 50 are early cataract signs.",
+      "raw": "no",
+      "value": false,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:06.070Z"
+     },
+     {
+      "qid": "falls",
+      "module": "lifestyle",
+      "question": "In the past year, have you had a fall, or do you find steps and kerbs hard to judge?",
+      "questionEn": "In the past year, have you had a fall, or do you find steps and kerbs hard to judge?",
+      "reason": "In active older people, bifocals and progressives blur steps and kerbs; a separate distance pair for walking can prevent falls.",
+      "raw": "yes I fell twice",
+      "value": true,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:06.071Z"
+     },
+     {
+      "qid": "budget",
+      "module": "preference",
+      "question": "How much would you like to spend on the lenses: under one thousand rupees, one to three thousand, or more than three thousand?",
+      "questionEn": "How much would you like to spend on the lenses: under one thousand rupees, one to three thousand, or more than three thousand?",
+      "reason": "Lens options for near-and-far needs range from low-cost bifocals to progressives; advice must be affordable to be followed.",
+      "raw": "between one and three thousand",
+      "value": "mid",
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:06.073Z"
+     }
+    ],
+    "skipped": [],
+    "startedAt": "2026-11-10T20:33:06.037Z",
+    "finishedAt": "2026-11-10T20:33:06.073Z",
+    "asked": 21,
+    "bank": 30,
+    "notAsked": [
+     "rf_sudden_which",
+     "rf_pain_severe",
+     "child_white",
+     "child_squint",
+     "diabetes_years",
+     "retina_exam",
+     "screen_hours",
+     "child_board",
+     "parent_myopia"
+    ]
+   },
+   "measurements": {
+    "readingDistanceCm": 38,
+    "acuity": {
+     "distanceM": 2,
+     "R": {
+      "logmar": 0.2
+     },
+     "L": {
+      "logmar": 0.3
+     }
+    },
+    "amsler": {
+     "R": "normal",
+     "L": "normal"
+    }
+   },
+   "profile": {
+    "derived": {
+     "age": 68,
+     "isChild": false,
+     "occ": "homemaker",
+     "pseudophakic": true,
+     "presbyopeLikely": true,
+     "urgent": false,
+     "diabetic": false
+    },
+    "vision": {
+     "zones": {
+      "near": {
+       "hours": 3,
+       "share": 0.375,
+       "source": "reported",
+       "workingDistanceCm": 38,
+       "distanceSource": "measured",
+       "demandD": 2.75
+      },
+      "intermediate": {
+       "hours": 3,
+       "share": 0.375,
+       "source": "occupation",
+       "workingDistanceCm": 66,
+       "demandD": 1.5
+      },
+      "distance": {
+       "hours": 2,
+       "share": 0.25,
+       "source": "reported"
+      }
+     },
+     "dominance": "balanced",
+     "designEmphasis": "Balanced",
+     "inputsReported": 2,
+     "nearDistanceMeasured": true
+    },
+    "presbyopia": {
+     "status": "pseudophakic",
+     "amplitudeD": 0.5,
+     "amplitudeSource": "after cataract surgery (no natural focusing)",
+     "expectedAmplitudeD": {
+      "min": 0,
+      "avg": 0
+     },
+     "workingDistanceCm": 38,
+     "nearDemandD": 2.75,
+     "addD": 2.5,
+     "addRangeD": [
+      2.25,
+      2.75
+     ],
+     "intermediateAddD": 1.25,
+     "measuredNearPoint": false
+    },
+    "myopiaRisk": null,
+    "triage": {
+     "lane": "green",
+     "flags": []
+    },
+    "recommendation": {
+     "category": "separate_pairs",
+     "title": "Two pairs: single-vision distance for walking + reading glasses",
+     "rationale": [
+      "Fall reported at 65+: multifocals blur steps and kerbs. In older people who are active outdoors, single-vision distance glasses reduced outdoor falls (VISIBLE trial).",
+      "Estimated reading add about +2.50 D for 38 cm (after cataract surgery (no natural focusing)). The optometrist confirms."
+     ],
+     "coatings": [],
+     "notes": [],
+     "centrationNeeded": false,
+     "example": null,
+     "decisionPath": [
+      {
+       "rule": "Red-flag lane",
+       "passed": false,
+       "detail": "lane green"
+      },
+      {
+       "rule": "Child under 16",
+       "passed": false,
+       "detail": "age 68"
+      },
+      {
+       "rule": "Needs a reading add",
+       "passed": true,
+       "detail": "add +2.50 D at 38 cm, status pseudophakic"
+      },
+      {
+       "rule": "Fall at 65+ and active outdoors",
+       "passed": true,
+       "detail": "age 68, fall yes, distance 25% of day"
+      }
+     ]
+    },
+    "advice": [
+     "good_light"
+    ],
+    "checks": [
+     "reading_distance",
+     "acuity",
+     "amsler",
+     "pd"
+    ],
+    "quality": {
+     "items": [
+      {
+       "key": "zones",
+       "label": "Daily hours reported by the patient",
+       "value": "2 of 3 (rest from occupation)",
+       "ok": true
+      },
+      {
+       "key": "nearDistance",
+       "label": "Near working distance",
+       "value": "measured, uncalibrated camera (±15%)",
+       "ok": true
+      },
+      {
+       "key": "amplitude",
+       "label": "Focusing range",
+       "value": "after cataract surgery (no natural focusing)",
+       "ok": true
+      },
+      {
+       "key": "acuity",
+       "label": "Eye-chart letter size",
+       "value": "screen not calibrated: sizes approximate",
+       "ok": false
+      },
+      {
+       "key": "answers",
+       "label": "Answers",
+       "value": "21 by voice, 0 by tap",
+       "ok": true
+      }
+     ],
+     "level": "high"
+    },
+    "rulesVersion": "2026.11-r2",
+    "summary": "68y · homemaker · balanced · add ~+2.50 · Two pairs: single-vision distance for walking + reading glasses"
+   },
+   "rulesVersion": "2026.11-r2",
+   "passport": {
+    "lang": "en",
+    "text": "DivyaDrishti Vision Passport · DD-FC001E\nA. Fatima · 11/11/2026\nYour eyes are mostly used for: a mix of near, arm’s-length and distance.\nSuggested: Two pairs: one for walking and distance, one for reading (add +2.50).\nAn optometrist will check these results and confirm your glasses.\nTips: Use bright light for close work such as reading and sewing.\nShow this message at any optical store or eye camp."
+   }
+  },
+  "receivedMinutesAgo": 330
+ },
+ {
+  "case": {
+   "id": "a4fc74ff-4c19-4998-a88e-ae0e143cd6da",
+   "createdAt": "2026-11-09T19:25:06.073Z",
+   "appVersion": "0.2.0",
+   "lang": "en",
+   "demo": true,
+   "site": {
+    "name": "Chennai Optics, Velachery",
+    "type": "store"
+   },
+   "operator": "Store owner (demo)",
+   "patient": {
+    "name": "V. Arjun",
+    "phone": "+91 96000 00510",
+    "village": "Guindy, Chennai 600032",
+    "age": 24,
+    "sex": "male"
+   },
+   "consent": {
+    "given": true,
+    "at": "2026-11-09T19:25:06.073Z",
+    "lang": "en",
+    "textVersion": "consent-v1",
+    "method": "demo"
+   },
+   "interview": {
+    "answers": {
+     "age": 24,
+     "sex": "male",
+     "complaint": [
+      "far_blur"
+     ],
+     "rf_sudden": false,
+     "rf_pain": false,
+     "conditions": [
+      "none"
+     ],
+     "glasses_now": true,
+     "glasses_type": "distance",
+     "glasses_years": 3,
+     "glasses_ok": "far_blur",
+     "rx_known": {
+      "R": {
+       "sph": -2.5,
+       "cyl": 0
+      },
+      "L": {
+       "sph": -2.75,
+       "cyl": 0
+      },
+      "text": "R −2.50   L −2.75",
+      "warnings": []
+     },
+     "occupation": "student",
+     "near_hours": 5,
+     "screen_hours": 5,
+     "outdoor_hours": 1,
+     "drives": true,
+     "night_glare": false
+    },
+    "trace": [
+     {
+      "qid": "age",
+      "module": "core",
+      "question": "How old are you?",
+      "questionEn": "How old are you?",
+      "reason": "Age sets which eye changes to look for: myopia in children, presbyopia after 40, cataract after 50.",
+      "raw": "24",
+      "value": 24,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:06.073Z"
+     },
+     {
+      "qid": "sex",
+      "module": "core",
+      "question": "Are you female or male?",
+      "questionEn": "Are you female or male?",
+      "reason": "Needed for the record; some conditions differ by sex (angle-closure glaucoma is more common in women).",
+      "raw": "male",
+      "value": "male",
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:06.075Z"
+     },
+     {
+      "qid": "complaint",
+      "module": "core",
+      "question": "What brings you here today? For example: blurry far away, blurry up close, headache or tired eyes, or just a check-up.",
+      "questionEn": "What brings you here today? For example: blurry far away, blurry up close, headache or tired eyes, or just a check-up.",
+      "reason": "The main complaint decides which tests and follow-up questions matter.",
+      "raw": "the board is blurry far away",
+      "value": [
+       "far_blur"
+      ],
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:06.080Z"
+     },
+     {
+      "qid": "rf_sudden",
+      "module": "redflag",
+      "question": "In the last few weeks, has your sight suddenly got worse, or have you seen flashes of light, a dark shadow like a curtain, or double vision?",
+      "questionEn": "In the last few weeks, has your sight suddenly got worse, or have you seen flashes of light, a dark shadow like a curtain, or double vision?",
+      "reason": "Sudden loss, flashes, a curtain or new double vision can mean retinal detachment, a blocked vessel or a stroke: same-day referral.",
+      "raw": "no",
+      "value": false,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:06.081Z"
+     },
+     {
+      "qid": "rf_pain",
+      "module": "redflag",
+      "question": "Do you have eye pain, redness, or an eye injury right now?",
+      "questionEn": "Do you have eye pain, redness, or an eye injury right now?",
+      "reason": "A painful red eye or an injury needs a doctor, not new glasses.",
+      "raw": "no",
+      "value": false,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:06.081Z"
+     },
+     {
+      "qid": "conditions",
+      "module": "medical",
+      "question": "Do you have diabetes, high blood pressure, or a thyroid problem?",
+      "questionEn": "Do you have diabetes, high blood pressure, or a thyroid problem?",
+      "reason": "Diabetes damages the retina silently and makes glasses power fluctuate; blood pressure and thyroid disease also affect the eyes.",
+      "raw": "none",
+      "value": [
+       "none"
+      ],
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:06.083Z"
+     },
+     {
+      "qid": "glasses_now",
+      "module": "glasses",
+      "question": "Do you wear glasses now?",
+      "questionEn": "Do you wear glasses now?",
+      "reason": "Current glasses show the past prescription and what is or isn’t working.",
+      "raw": "yes",
+      "value": true,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:06.084Z"
+     },
+     {
+      "qid": "glasses_type",
+      "module": "glasses",
+      "question": "What kind are they: for distance, for reading, bifocal with a line, or progressive with no line?",
+      "questionEn": "What kind are they: for distance, for reading, bifocal with a line, or progressive with no line?",
+      "reason": "Tells us which zones the patient already relies on, and whether they have adapted to multifocals before.",
+      "raw": "distance",
+      "value": "distance",
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:06.087Z"
+     },
+     {
+      "qid": "glasses_years",
+      "module": "glasses",
+      "question": "How old are your current glasses, in years?",
+      "questionEn": "How old are your current glasses, in years?",
+      "reason": "Prescriptions older than about two years are often out of date, especially after 40.",
+      "raw": "three",
+      "value": 3,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:06.087Z"
+     },
+     {
+      "qid": "glasses_ok",
+      "module": "glasses",
+      "question": "With these glasses, how do you see: fine, blurry far away, blurry up close, or do they give you headaches?",
+      "questionEn": "With these glasses, how do you see: fine, blurry far away, blurry up close, or do they give you headaches?",
+      "reason": "Separates an outdated prescription from a wrong lens type or a poor fit.",
+      "raw": "far is blurry",
+      "value": "far_blur",
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:06.089Z"
+     },
+     {
+      "qid": "rx_known",
+      "module": "glasses",
+      "question": "If you have the prescription slip, read it out. For example: right eye minus one point five, cylinder minus point five, axis ninety. Or say skip.",
+      "questionEn": "If you have the prescription slip, read it out. For example: right eye minus one point five, cylinder minus point five, axis ninety. Or say skip.",
+      "reason": "A known prescription is the best starting point; it is checked against valid lens steps and for big differences between the eyes.",
+      "raw": "right eye minus two fifty left eye minus two seventy five",
+      "value": {
+       "R": {
+        "sph": -2.5,
+        "cyl": 0
+       },
+       "L": {
+        "sph": -2.75,
+        "cyl": 0
+       },
+       "text": "R −2.50   L −2.75",
+       "warnings": []
+      },
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:06.090Z"
+     },
+     {
+      "qid": "occupation",
+      "module": "lifestyle",
+      "question": "What work do you do for most of the day? For example: farming, tailoring, driving, a shop, office or computer work, housework, or studies.",
+      "questionEn": "What work do you do for most of the day? For example: farming, tailoring, driving, a shop, office or computer work, housework, or studies.",
+      "reason": "Work sets how many hours go to near, arm’s-length and far vision, the core of the vision profile.",
+      "raw": "student",
+      "value": "student",
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:06.106Z"
+     },
+     {
+      "qid": "near_hours",
+      "module": "lifestyle",
+      "question": "On a normal day, how many hours do you spend on close work: reading, the phone, sewing or fine handwork?",
+      "questionEn": "On a normal day, how many hours do you spend on close work: reading, the phone, sewing or fine handwork?",
+      "reason": "Long close work explains strain symptoms and shapes the lens design.",
+      "raw": "five hours",
+      "value": 5,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:06.106Z"
+     },
+     {
+      "qid": "screen_hours",
+      "module": "lifestyle",
+      "question": "How many hours a day do you work on a computer or laptop screen?",
+      "questionEn": "How many hours a day do you work on a computer or laptop screen?",
+      "reason": "Screens sit at arm’s length (\"intermediate\" vision), which standard bifocals do not cover and progressives cover narrowly.",
+      "raw": "five hours",
+      "value": 5,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:06.106Z"
+     },
+     {
+      "qid": "outdoor_hours",
+      "module": "lifestyle",
+      "question": "How many hours a day are you outdoors in daylight?",
+      "questionEn": "How many hours a day are you outdoors in daylight?",
+      "reason": "Long hours in sunlight call for UV protection and possibly photochromic lenses.",
+      "raw": "one hour",
+      "value": 1,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:06.107Z"
+     },
+     {
+      "qid": "drives",
+      "module": "lifestyle",
+      "question": "Do you drive a vehicle or ride a two-wheeler?",
+      "questionEn": "Do you drive a vehicle or ride a two-wheeler?",
+      "reason": "Driving needs sharp distance vision and wide side vision; it changes lens design and coating advice.",
+      "raw": "yes",
+      "value": true,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:06.107Z"
+     },
+     {
+      "qid": "night_glare",
+      "module": "lifestyle",
+      "question": "At night, do headlights or street lights dazzle you, or do colours look dull and faded?",
+      "questionEn": "At night, do headlights or street lights dazzle you, or do colours look dull and faded?",
+      "reason": "Night glare for a driver calls for an anti-reflective coating.",
+      "raw": "no",
+      "value": false,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "en",
+      "at": "2026-11-10T20:33:06.108Z"
+     }
+    ],
+    "skipped": [],
+    "startedAt": "2026-11-10T20:33:06.073Z",
+    "finishedAt": "2026-11-10T20:33:06.108Z",
+    "asked": 17,
+    "bank": 30,
+    "notAsked": [
+     "rf_sudden_which",
+     "rf_pain_severe",
+     "child_white",
+     "child_squint",
+     "diabetes_years",
+     "retina_exam",
+     "glaucoma_family",
+     "eye_surgery",
+     "frequent_change",
+     "child_board",
+     "parent_myopia",
+     "falls",
+     "budget"
+    ]
+   },
+   "measurements": {
+    "readingDistanceCm": 31,
+    "acuity": {
+     "distanceM": 2,
+     "R": {
+      "logmar": 0.3
+     },
+     "L": {
+      "logmar": 0.3
+     }
+    }
+   },
+   "profile": {
+    "derived": {
+     "age": 24,
+     "isChild": false,
+     "occ": "student",
+     "pseudophakic": false,
+     "presbyopeLikely": false,
+     "urgent": false,
+     "diabetic": false
+    },
+    "vision": {
+     "zones": {
+      "near": {
+       "hours": 5,
+       "share": 0.38461538461538464,
+       "source": "reported",
+       "workingDistanceCm": 31,
+       "distanceSource": "measured",
+       "demandD": 3.25
+      },
+      "intermediate": {
+       "hours": 6,
+       "share": 0.46153846153846156,
+       "source": "reported",
+       "workingDistanceCm": 66,
+       "demandD": 1.5
+      },
+      "distance": {
+       "hours": 2,
+       "share": 0.15384615384615385,
+       "source": "reported"
+      }
+     },
+     "dominance": "balanced",
+     "designEmphasis": "Balanced",
+     "inputsReported": 3,
+     "nearDistanceMeasured": true
+    },
+    "presbyopia": {
+     "status": "none",
+     "amplitudeD": 9,
+     "amplitudeSource": "age (Hofstetter minimum)",
+     "expectedAmplitudeD": {
+      "min": 9,
+      "avg": 11.3
+     },
+     "workingDistanceCm": 31,
+     "nearDemandD": 3.25,
+     "addD": 0,
+     "addRangeD": null,
+     "intermediateAddD": 0,
+     "measuredNearPoint": false
+    },
+    "myopiaRisk": null,
+    "triage": {
+     "lane": "green",
+     "flags": []
+    },
+    "recommendation": {
+     "category": "sv_distance",
+     "title": "Single-vision lenses for distance",
+     "rationale": [
+      "No reading add needed yet at this age and working distance."
+     ],
+     "coatings": [
+      "Anti-reflective coating for night driving and glare"
+     ],
+     "notes": [
+      "Blue-light filter: optional, not a treatment. A Cochrane review of 17 trials (2023) found it probably makes no difference to eye strain, sleep or retinal health, and no harm. What relieves screen strain: the right power at screen distance, an anti-reflective coating, blinking and 20-20-20 breaks."
+     ],
+     "centrationNeeded": false,
+     "example": null,
+     "decisionPath": [
+      {
+       "rule": "Red-flag lane",
+       "passed": false,
+       "detail": "lane green"
+      },
+      {
+       "rule": "Child under 16",
+       "passed": false,
+       "detail": "age 24"
+      },
+      {
+       "rule": "Needs a reading add",
+       "passed": false,
+       "detail": "add +0.00 D at 31 cm, status none"
+      },
+      {
+       "rule": "Distance complaint or already wears glasses",
+       "passed": true,
+       "detail": "distance complaint yes, glasses yes"
+      }
+     ]
+    },
+    "advice": [
+     "rule_20_20_20"
+    ],
+    "checks": [
+     "reading_distance",
+     "acuity",
+     "pd"
+    ],
+    "quality": {
+     "items": [
+      {
+       "key": "zones",
+       "label": "Daily hours reported by the patient",
+       "value": "3 of 3 (rest from occupation)",
+       "ok": true
+      },
+      {
+       "key": "nearDistance",
+       "label": "Near working distance",
+       "value": "measured, uncalibrated camera (±15%)",
+       "ok": true
+      },
+      {
+       "key": "amplitude",
+       "label": "Focusing range",
+       "value": "age (Hofstetter minimum)",
+       "ok": false
+      },
+      {
+       "key": "acuity",
+       "label": "Eye-chart letter size",
+       "value": "screen not calibrated: sizes approximate",
+       "ok": false
+      },
+      {
+       "key": "answers",
+       "label": "Answers",
+       "value": "17 by voice, 0 by tap",
+       "ok": true
+      }
+     ],
+     "level": "medium"
+    },
+    "rulesVersion": "2026.11-r2",
+    "summary": "24y · student · balanced · Single-vision lenses for distance"
+   },
+   "rulesVersion": "2026.11-r2",
+   "passport": {
+    "lang": "en",
+    "text": "DivyaDrishti Vision Passport · DD-A4FC74\nV. Arjun · 11/11/2026\nYour eyes are mostly used for: a mix of near, arm’s-length and distance.\nSuggested: Single-vision glasses for distance.\nRx: R −2.50   L −2.75\nAn optometrist will check these results and confirm your glasses.\nTips: Every 20 minutes of close or screen work, look 6 metres away for 20 seconds.\nShow this message at any optical store or eye camp."
+   }
+  },
+  "receivedMinutesAgo": 1500,
+  "review": {
+   "reviewer": {
+    "name": "Optom. A. Meenakshi",
+    "regNo": "TN-OPT-0000 (demo)"
+   },
+   "decision": "modify",
+   "lensCategory": "sv_distance",
+   "nextStep": "Re-refract at the store: vision 6/12 with current glasses suggests the power has increased.",
+   "notes": "Young myope, 5 h/day screen. Advise outdoor time and 20-20-20.",
+   "messageToPatient": "Please come back to the store for a new power check this week.",
+   "afterMinutes": 40,
+   "decisionLabel": "Approved with changes"
+  }
+ },
+ {
+  "case": {
+   "id": "a128e76b-a437-49ee-a0ae-a5aede913044",
+   "createdAt": "2026-11-10T19:45:06.108Z",
+   "appVersion": "0.2.0",
+   "lang": "ta",
+   "demo": true,
+   "site": {
+    "name": "Eye camp, Kanchipuram",
+    "type": "camp"
+   },
+   "operator": "Camp volunteer (demo)",
+   "patient": {
+    "name": "P. Selvi",
+    "phone": "+91 94430 00684",
+    "village": "Kanchipuram 631502",
+    "age": 44,
+    "sex": "female"
+   },
+   "consent": {
+    "given": true,
+    "at": "2026-11-10T19:45:06.108Z",
+    "lang": "ta",
+    "textVersion": "consent-v1",
+    "method": "demo"
+   },
+   "interview": {
+    "answers": {
+     "age": 44,
+     "sex": "female",
+     "complaint": [
+      "near_blur"
+     ],
+     "rf_sudden": false,
+     "rf_pain": false,
+     "conditions": [
+      "none"
+     ],
+     "glaucoma_family": false,
+     "eye_surgery": "none",
+     "glasses_now": false,
+     "occupation": "weaver",
+     "near_hours": 4,
+     "outdoor_hours": 1,
+     "drives": false,
+     "budget": "mid"
+    },
+    "trace": [
+     {
+      "qid": "age",
+      "module": "core",
+      "question": "உங்கள் வயது என்ன?",
+      "questionEn": "How old are you?",
+      "reason": "Age sets which eye changes to look for: myopia in children, presbyopia after 40, cataract after 50.",
+      "raw": "44",
+      "value": 44,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "ta",
+      "at": "2026-11-10T20:33:06.108Z"
+     },
+     {
+      "qid": "sex",
+      "module": "core",
+      "question": "நீங்கள் பெண்ணா அல்லது ஆணா?",
+      "questionEn": "Are you female or male?",
+      "reason": "Needed for the record; some conditions differ by sex (angle-closure glaucoma is more common in women).",
+      "raw": "பெண்",
+      "value": "female",
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "ta",
+      "at": "2026-11-10T20:33:06.109Z"
+     },
+     {
+      "qid": "complaint",
+      "module": "core",
+      "question": "இன்று எதற்காக வந்தீர்கள்? உதாரணமாக: தூரம் மங்கலாகத் தெரிவது, அருகில் மங்கலாகத் தெரிவது, தலைவலி அல்லது கண் சோர்வு, அல்லது வெறும் பரிசோதனை.",
+      "questionEn": "What brings you here today? For example: blurry far away, blurry up close, headache or tired eyes, or just a check-up.",
+      "reason": "The main complaint decides which tests and follow-up questions matter.",
+      "raw": "அருகில் மங்கல்",
+      "value": [
+       "near_blur"
+      ],
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "ta",
+      "at": "2026-11-10T20:33:06.115Z"
+     },
+     {
+      "qid": "rf_sudden",
+      "module": "redflag",
+      "question": "கடந்த சில வாரங்களில் பார்வை திடீரென்று குறைந்ததா, அல்லது ஒளி மின்னல், திரை போன்ற கருப்பு நிழல், அல்லது இரண்டாகத் தெரிவது ஏற்பட்டதா?",
+      "questionEn": "In the last few weeks, has your sight suddenly got worse, or have you seen flashes of light, a dark shadow like a curtain, or double vision?",
+      "reason": "Sudden loss, flashes, a curtain or new double vision can mean retinal detachment, a blocked vessel or a stroke: same-day referral.",
+      "raw": "இல்லை",
+      "value": false,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "ta",
+      "at": "2026-11-10T20:33:06.116Z"
+     },
+     {
+      "qid": "rf_pain",
+      "module": "redflag",
+      "question": "இப்போது கண்ணில் வலி, சிவப்பு, அல்லது ஏதேனும் காயம் இருக்கிறதா?",
+      "questionEn": "Do you have eye pain, redness, or an eye injury right now?",
+      "reason": "A painful red eye or an injury needs a doctor, not new glasses.",
+      "raw": "இல்லை",
+      "value": false,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "ta",
+      "at": "2026-11-10T20:33:06.117Z"
+     },
+     {
+      "qid": "conditions",
+      "module": "medical",
+      "question": "உங்களுக்கு சர்க்கரை நோய், ரத்த அழுத்தம், அல்லது தைராய்டு பிரச்சனை இருக்கிறதா?",
+      "questionEn": "Do you have diabetes, high blood pressure, or a thyroid problem?",
+      "reason": "Diabetes damages the retina silently and makes glasses power fluctuate; blood pressure and thyroid disease also affect the eyes.",
+      "raw": "எதுவும் இல்லை",
+      "value": [
+       "none"
+      ],
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "ta",
+      "at": "2026-11-10T20:33:06.119Z"
+     },
+     {
+      "qid": "glaucoma_family",
+      "module": "medical",
+      "question": "உங்கள் அம்மா, அப்பா, சகோதரர் அல்லது சகோதரிக்கு கண் அழுத்த நோய் (கிளாக்கோமா) இருக்கிறதா?",
+      "questionEn": "Does your mother, father, brother or sister have glaucoma, the eye pressure disease?",
+      "reason": "Glaucoma runs in families and steals sight painlessly; relatives over 40 need an eye-pressure and optic-nerve check.",
+      "raw": "இல்லை",
+      "value": false,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "ta",
+      "at": "2026-11-10T20:33:06.119Z"
+     },
+     {
+      "qid": "eye_surgery",
+      "module": "medical",
+      "question": "உங்களுக்கு கண்புரை அறுவை சிகிச்சை அல்லது வேறு ஏதேனும் கண் அறுவை சிகிச்சை செய்யப்பட்டதா?",
+      "questionEn": "Have you had cataract surgery, or any other eye operation?",
+      "reason": "After cataract surgery the eye cannot focus up close, so near glasses are needed whatever the age.",
+      "raw": "இல்லை",
+      "value": "none",
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "ta",
+      "at": "2026-11-10T20:33:06.120Z"
+     },
+     {
+      "qid": "glasses_now",
+      "module": "glasses",
+      "question": "இப்போது கண்ணாடி அணிகிறீர்களா?",
+      "questionEn": "Do you wear glasses now?",
+      "reason": "Current glasses show the past prescription and what is or isn’t working.",
+      "raw": "இல்லை",
+      "value": false,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "ta",
+      "at": "2026-11-10T20:33:06.121Z"
+     },
+     {
+      "qid": "occupation",
+      "module": "lifestyle",
+      "question": "நாளின் பெரும்பகுதி என்ன வேலை செய்கிறீர்கள்? உதாரணமாக: விவசாயம், தையல், வண்டி ஓட்டுதல், கடை, அலுவலகம் அல்லது கணினி வேலை, வீட்டு வேலை, அல்லது படிப்பு.",
+      "questionEn": "What work do you do for most of the day? For example: farming, tailoring, driving, a shop, office or computer work, housework, or studies.",
+      "reason": "Work sets how many hours go to near, arm’s-length and far vision, the core of the vision profile.",
+      "raw": "நெசவு",
+      "value": "weaver",
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "ta",
+      "at": "2026-11-10T20:33:06.130Z"
+     },
+     {
+      "qid": "near_hours",
+      "module": "lifestyle",
+      "question": "ஒரு சாதாரண நாளில் எத்தனை மணி நேரம் அருகில் பார்க்கும் வேலை செய்கிறீர்கள்: படிப்பது, போன், தையல் அல்லது நுணுக்கமான கைவேலை?",
+      "questionEn": "On a normal day, how many hours do you spend on close work: reading, the phone, sewing or fine handwork?",
+      "reason": "From the late 30s, hours of close work decide the reading add and the lens type.",
+      "raw": "நாலு மணி நேரம்",
+      "value": 4,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "ta",
+      "at": "2026-11-10T20:33:06.131Z"
+     },
+     {
+      "qid": "outdoor_hours",
+      "module": "lifestyle",
+      "question": "நாளில் எத்தனை மணி நேரம் வெளியே பகல் வெளிச்சத்தில் இருக்கிறீர்கள்?",
+      "questionEn": "How many hours a day are you outdoors in daylight?",
+      "reason": "Long hours in sunlight call for UV protection and possibly photochromic lenses.",
+      "raw": "ஒரு மணி",
+      "value": 1,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "ta",
+      "at": "2026-11-10T20:33:06.131Z"
+     },
+     {
+      "qid": "drives",
+      "module": "lifestyle",
+      "question": "நீங்கள் வாகனம் அல்லது இருசக்கர வாகனம் ஓட்டுகிறீர்களா?",
+      "questionEn": "Do you drive a vehicle or ride a two-wheeler?",
+      "reason": "Driving needs sharp distance vision and wide side vision; it changes lens design and coating advice.",
+      "raw": "இல்லை",
+      "value": false,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "ta",
+      "at": "2026-11-10T20:33:06.131Z"
+     },
+     {
+      "qid": "budget",
+      "module": "preference",
+      "question": "லென்ஸுக்கு எவ்வளவு செலவு செய்ய விரும்புகிறீர்கள்: ஆயிரம் ரூபாய்க்குக் குறைவாக, ஆயிரம் முதல் மூவாயிரம், அல்லது மூவாயிரத்திற்கு மேல்?",
+      "questionEn": "How much would you like to spend on the lenses: under one thousand rupees, one to three thousand, or more than three thousand?",
+      "reason": "Lens options for near-and-far needs range from low-cost bifocals to progressives; advice must be affordable to be followed.",
+      "raw": "ஆயிரம் முதல் மூவாயிரம்",
+      "value": "mid",
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "ta",
+      "at": "2026-11-10T20:33:06.133Z"
+     }
+    ],
+    "skipped": [],
+    "startedAt": "2026-11-10T20:33:06.108Z",
+    "finishedAt": "2026-11-10T20:33:06.133Z",
+    "asked": 14,
+    "bank": 30,
+    "notAsked": [
+     "rf_sudden_which",
+     "rf_pain_severe",
+     "child_white",
+     "child_squint",
+     "diabetes_years",
+     "retina_exam",
+     "glasses_type",
+     "glasses_years",
+     "glasses_ok",
+     "rx_known",
+     "frequent_change",
+     "screen_hours",
+     "child_board",
+     "parent_myopia",
+     "night_glare",
+     "falls"
+    ]
+   },
+   "measurements": {
+    "readingDistanceCm": 42,
+    "nearPointCm": 30,
+    "acuity": {
+     "distanceM": 2,
+     "R": {
+      "logmar": 0
+     },
+     "L": {
+      "logmar": 0.1
+     }
+    }
+   },
+   "profile": {
+    "derived": {
+     "age": 44,
+     "isChild": false,
+     "occ": "weaver",
+     "pseudophakic": false,
+     "presbyopeLikely": true,
+     "urgent": false,
+     "diabetic": false
+    },
+    "vision": {
+     "zones": {
+      "near": {
+       "hours": 4,
+       "share": 0.4444444444444444,
+       "source": "reported",
+       "workingDistanceCm": 42,
+       "distanceSource": "measured",
+       "demandD": 2.5
+      },
+      "intermediate": {
+       "hours": 4,
+       "share": 0.4444444444444444,
+       "source": "occupation",
+       "workingDistanceCm": 66,
+       "demandD": 1.5
+      },
+      "distance": {
+       "hours": 1,
+       "share": 0.1111111111111111,
+       "source": "reported"
+      }
+     },
+     "dominance": "balanced",
+     "designEmphasis": "Balanced",
+     "inputsReported": 2,
+     "nearDistanceMeasured": true
+    },
+    "presbyopia": {
+     "status": "early",
+     "amplitudeD": 3.3,
+     "amplitudeSource": "measured near point",
+     "expectedAmplitudeD": {
+      "min": 4,
+      "avg": 5.3
+     },
+     "workingDistanceCm": 42,
+     "nearDemandD": 2.5,
+     "addD": 0.75,
+     "addRangeD": [
+      0.5,
+      1
+     ],
+     "intermediateAddD": 0,
+     "measuredNearPoint": true
+    },
+    "myopiaRisk": null,
+    "triage": {
+     "lane": "green",
+     "flags": []
+    },
+    "recommendation": {
+     "category": "office",
+     "title": "Office (near-variable) lens for work, plus distance glasses if needed",
+     "rationale": [
+      "Almost the whole day is close and arm’s-length work (89%): a work lens gives wider near and intermediate zones than a progressive.",
+      "Estimated reading add about +0.75 D for 42 cm (measured near point). The optometrist confirms."
+     ],
+     "coatings": [],
+     "notes": [
+      "If only one pair is affordable: a progressive with the Near design emphasis."
+     ],
+     "centrationNeeded": true,
+     "example": "e.g. ZEISS SmartLife Progressive with the Near design option (one-pair alternative)",
+     "decisionPath": [
+      {
+       "rule": "Red-flag lane",
+       "passed": false,
+       "detail": "lane green"
+      },
+      {
+       "rule": "Child under 16",
+       "passed": false,
+       "detail": "age 44"
+      },
+      {
+       "rule": "Needs a reading add",
+       "passed": true,
+       "detail": "add +0.75 D at 42 cm, status early"
+      },
+      {
+       "rule": "Fall at 65+ and active outdoors",
+       "passed": false,
+       "detail": "age 44, fall no, distance 11% of day"
+      },
+      {
+       "rule": "Mostly close work, little else (near ≥50%, others <25%, no distance complaint)",
+       "passed": false,
+       "detail": "near 44%, arm’s length 44%, distance 11%, distance complaint no"
+      },
+      {
+       "rule": "Arm’s-length work dominates, or close + arm’s length ≥75%",
+       "passed": true,
+       "detail": "dominance balanced, close + arm’s length 89%, distance 11%"
+      }
+     ]
+    },
+    "advice": [
+     "rule_20_20_20",
+     "good_light"
+    ],
+    "checks": [
+     "reading_distance",
+     "near_point",
+     "acuity",
+     "pd"
+    ],
+    "quality": {
+     "items": [
+      {
+       "key": "zones",
+       "label": "Daily hours reported by the patient",
+       "value": "2 of 3 (rest from occupation)",
+       "ok": true
+      },
+      {
+       "key": "nearDistance",
+       "label": "Near working distance",
+       "value": "measured, uncalibrated camera (±15%)",
+       "ok": true
+      },
+      {
+       "key": "amplitude",
+       "label": "Focusing range",
+       "value": "measured near point",
+       "ok": true
+      },
+      {
+       "key": "acuity",
+       "label": "Eye-chart letter size",
+       "value": "screen not calibrated: sizes approximate",
+       "ok": false
+      },
+      {
+       "key": "answers",
+       "label": "Answers",
+       "value": "14 by voice, 0 by tap",
+       "ok": true
+      }
+     ],
+     "level": "high"
+    },
+    "rulesVersion": "2026.11-r2",
+    "summary": "44y · weaver · balanced · add ~+0.75 · Office (near-variable) lens for work, plus distance glasses if needed"
+   },
+   "rulesVersion": "2026.11-r2",
+   "passport": {
+    "lang": "ta",
+    "text": "திவ்யதிருஷ்டி பார்வை பாஸ்போர்ட் · DD-A128E7\nP. Selvi · 11/11/2026\nஉங்கள் கண்கள் பெரும்பாலும் பயன்படுவது: அருகில், கை நீளம், தூரம் மூன்றும் கலந்து.\nபரிந்துரை: அருகிலான மற்றும் கை நீள வேலைக்கான கண்ணாடி (add +0.75).\nஒரு ஆப்டோமெட்ரிஸ்ட் இந்த முடிவுகளைச் சரிபார்த்து உங்கள் கண்ணாடியை உறுதி செய்வார்.\nஆலோசனைகள்: ஒவ்வொரு 20 நிமிட அருகிலான வேலை அல்லது திரைக்குப் பிறகு, 20 வினாடிகள் 6 மீட்டர் தூரத்தைப் பாருங்கள். படித்தல், தையல் போன்ற அருகிலான வேலைக்கு நல்ல வெளிச்சம் வைத்துக்கொள்ளுங்கள்.\nஇந்தச் செய்தியை எந்த கண்ணாடிக் கடை அல்லது கண் முகாமிலும் காட்டுங்கள்."
+   }
+  },
+  "receivedMinutesAgo": 40
+ },
+ {
+  "case": {
+   "id": "2fa50b51-88d9-4777-a863-03cb4b9b4456",
+   "createdAt": "2026-11-10T18:35:06.134Z",
+   "appVersion": "0.2.0",
+   "lang": "te",
+   "demo": true,
+   "site": {
+    "name": "Sri Sai Opticals, Uppal",
+    "type": "store"
+   },
+   "operator": "Store owner (demo)",
+   "patient": {
+    "name": "G. Ramulu",
+    "phone": "+91 98490 00327",
+    "village": "Uppal, Hyderabad 500039",
+    "age": 59,
+    "sex": "male"
+   },
+   "consent": {
+    "given": true,
+    "at": "2026-11-10T18:35:06.134Z",
+    "lang": "te",
+    "textVersion": "consent-v1",
+    "method": "demo"
+   },
+   "interview": {
+    "answers": {
+     "age": 59,
+     "sex": "male",
+     "complaint": [
+      "near_blur",
+      "far_blur"
+     ],
+     "rf_sudden": false,
+     "rf_pain": false,
+     "conditions": [
+      "diabetes"
+     ],
+     "diabetes_years": 6,
+     "retina_exam": "over_1y",
+     "glaucoma_family": false,
+     "eye_surgery": "none",
+     "glasses_now": false,
+     "occupation": "driver",
+     "near_hours": 1,
+     "night_glare": true,
+     "budget": "mid"
+    },
+    "trace": [
+     {
+      "qid": "age",
+      "module": "core",
+      "question": "మీ వయస్సు ఎంత?",
+      "questionEn": "How old are you?",
+      "reason": "Age sets which eye changes to look for: myopia in children, presbyopia after 40, cataract after 50.",
+      "raw": "యాభై తొమ్మిది",
+      "value": 59,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "te",
+      "at": "2026-11-10T20:33:06.134Z"
+     },
+     {
+      "qid": "sex",
+      "module": "core",
+      "question": "మీరు స్త్రీనా, పురుషుడా?",
+      "questionEn": "Are you female or male?",
+      "reason": "Needed for the record; some conditions differ by sex (angle-closure glaucoma is more common in women).",
+      "raw": "మగ",
+      "value": "male",
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "te",
+      "at": "2026-11-10T20:33:06.135Z"
+     },
+     {
+      "qid": "complaint",
+      "module": "core",
+      "question": "ఈ రోజు ఎందుకు వచ్చారు? ఉదాహరణకు: దూరం మసకగా కనిపించడం, దగ్గర మసకగా కనిపించడం, తలనొప్పి లేదా కళ్ళు అలసిపోవడం, లేదా మామూలు పరీక్ష.",
+      "questionEn": "What brings you here today? For example: blurry far away, blurry up close, headache or tired eyes, or just a check-up.",
+      "reason": "The main complaint decides which tests and follow-up questions matter.",
+      "raw": "దూరం మసకగా ఉంది చదవడం కూడా కష్టం",
+      "value": [
+       "near_blur",
+       "far_blur"
+      ],
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "te",
+      "at": "2026-11-10T20:33:06.140Z"
+     },
+     {
+      "qid": "rf_sudden",
+      "module": "redflag",
+      "question": "గత కొన్ని వారాల్లో మీ చూపు అకస్మాత్తుగా తగ్గిందా, లేదా వెలుగు మెరుపులు, తెరలాంటి నల్లని నీడ, లేదా రెండుగా కనిపించడం జరిగిందా?",
+      "questionEn": "In the last few weeks, has your sight suddenly got worse, or have you seen flashes of light, a dark shadow like a curtain, or double vision?",
+      "reason": "Sudden loss, flashes, a curtain or new double vision can mean retinal detachment, a blocked vessel or a stroke: same-day referral.",
+      "raw": "లేదు",
+      "value": false,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "te",
+      "at": "2026-11-10T20:33:06.143Z"
+     },
+     {
+      "qid": "rf_pain",
+      "module": "redflag",
+      "question": "ఇప్పుడు కంటిలో నొప్పి, ఎరుపు, లేదా ఏదైనా గాయం ఉందా?",
+      "questionEn": "Do you have eye pain, redness, or an eye injury right now?",
+      "reason": "A painful red eye or an injury needs a doctor, not new glasses.",
+      "raw": "లేదండి",
+      "value": false,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "te",
+      "at": "2026-11-10T20:33:06.143Z"
+     },
+     {
+      "qid": "conditions",
+      "module": "medical",
+      "question": "మీకు షుగర్ (మధుమేహం), బీపీ, లేదా థైరాయిడ్ సమస్య ఉందా?",
+      "questionEn": "Do you have diabetes, high blood pressure, or a thyroid problem?",
+      "reason": "Diabetes damages the retina silently and makes glasses power fluctuate; blood pressure and thyroid disease also affect the eyes.",
+      "raw": "షుగర్ ఉంది",
+      "value": [
+       "diabetes"
+      ],
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "te",
+      "at": "2026-11-10T20:33:06.145Z"
+     },
+     {
+      "qid": "diabetes_years",
+      "module": "medical",
+      "question": "ఎన్ని సంవత్సరాలుగా షుగర్ ఉంది?",
+      "questionEn": "For how many years have you had diabetes?",
+      "reason": "Retinopathy risk rises with every year of diabetes; a new diagnosis also means the glasses power may still be shifting.",
+      "raw": "ఆరు సంవత్సరాలు",
+      "value": 6,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "te",
+      "at": "2026-11-10T20:33:06.145Z"
+     },
+     {
+      "qid": "retina_exam",
+      "module": "medical",
+      "question": "డాక్టర్ చివరిసారిగా కంటిలో చుక్కల మందు వేసి కంటి లోపలి భాగాన్ని ఎప్పుడు పరీక్షించారు? గత ఒక సంవత్సరంలో, ఒక సంవత్సరం కంటే ముందు, లేదా ఎప్పుడూ లేదు?",
+      "questionEn": "When did a doctor last put drops in your eyes and check the back of the eye? Within the last year, more than a year ago, or never?",
+      "reason": "People with diabetes need a dilated retina check every year; an overdue check is referred.",
+      "raw": "రెండు సంవత్సరాల క్రితం",
+      "value": "over_1y",
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "te",
+      "at": "2026-11-10T20:33:06.148Z"
+     },
+     {
+      "qid": "glaucoma_family",
+      "module": "medical",
+      "question": "మీ అమ్మ, నాన్న, అన్నదమ్ములు లేదా అక్కచెల్లెళ్ళలో ఎవరికైనా గ్లాకోమా (కంటి ఒత్తిడి వ్యాధి) ఉందా?",
+      "questionEn": "Does your mother, father, brother or sister have glaucoma, the eye pressure disease?",
+      "reason": "Glaucoma runs in families and steals sight painlessly; relatives over 40 need an eye-pressure and optic-nerve check.",
+      "raw": "లేదు",
+      "value": false,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "te",
+      "at": "2026-11-10T20:33:06.149Z"
+     },
+     {
+      "qid": "eye_surgery",
+      "module": "medical",
+      "question": "మీకు శుక్లం (కాటరాక్ట్) ఆపరేషన్ లేదా మరేదైనా కంటి ఆపరేషన్ జరిగిందా?",
+      "questionEn": "Have you had cataract surgery, or any other eye operation?",
+      "reason": "After cataract surgery the eye cannot focus up close, so near glasses are needed whatever the age.",
+      "raw": "లేదు",
+      "value": "none",
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "te",
+      "at": "2026-11-10T20:33:06.150Z"
+     },
+     {
+      "qid": "glasses_now",
+      "module": "glasses",
+      "question": "మీరు ఇప్పుడు కళ్ళజోడు వాడుతున్నారా?",
+      "questionEn": "Do you wear glasses now?",
+      "reason": "Current glasses show the past prescription and what is or isn’t working.",
+      "raw": "లేదు",
+      "value": false,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "te",
+      "at": "2026-11-10T20:33:06.150Z"
+     },
+     {
+      "qid": "occupation",
+      "module": "lifestyle",
+      "question": "రోజులో ఎక్కువ సమయం ఏ పని చేస్తారు? ఉదాహరణకు: వ్యవసాయం, కుట్టుపని, వాహనం నడపడం, దుకాణం, ఆఫీసు లేదా కంప్యూటర్ పని, ఇంటి పని, లేదా చదువు.",
+      "questionEn": "What work do you do for most of the day? For example: farming, tailoring, driving, a shop, office or computer work, housework, or studies.",
+      "reason": "Work sets how many hours go to near, arm’s-length and far vision, the core of the vision profile.",
+      "raw": "ఆటో నడుపుతాను",
+      "value": "driver",
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "te",
+      "at": "2026-11-10T20:33:06.162Z"
+     },
+     {
+      "qid": "near_hours",
+      "module": "lifestyle",
+      "question": "సాధారణ రోజున ఎన్ని గంటలు దగ్గరి పని చేస్తారు: చదవడం, ఫోన్, కుట్టుపని లేదా సన్నని చేతిపని?",
+      "questionEn": "On a normal day, how many hours do you spend on close work: reading, the phone, sewing or fine handwork?",
+      "reason": "From the late 30s, hours of close work decide the reading add and the lens type.",
+      "raw": "ఒక గంట",
+      "value": 1,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "te",
+      "at": "2026-11-10T20:33:06.162Z"
+     },
+     {
+      "qid": "night_glare",
+      "module": "lifestyle",
+      "question": "రాత్రిపూట వాహనాల లైట్లు లేదా వీధి దీపాలు కళ్ళు చెదిరేలా చేస్తాయా, లేదా రంగులు వెలిసిపోయినట్టు కనిపిస్తాయా?",
+      "questionEn": "At night, do headlights or street lights dazzle you, or do colours look dull and faded?",
+      "reason": "Glare and faded colours after 50 are early cataract signs.",
+      "raw": "అవును రాత్రి లైట్లు కళ్ళు చెదురుతాయి",
+      "value": true,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "te",
+      "at": "2026-11-10T20:33:06.163Z"
+     },
+     {
+      "qid": "budget",
+      "module": "preference",
+      "question": "లెన్స్‌ల కోసం ఎంత ఖర్చు చేయాలనుకుంటున్నారు: వెయ్యి రూపాయల లోపు, వెయ్యి నుంచి మూడు వేలు, లేదా మూడు వేల కంటే ఎక్కువ?",
+      "questionEn": "How much would you like to spend on the lenses: under one thousand rupees, one to three thousand, or more than three thousand?",
+      "reason": "Lens options for near-and-far needs range from low-cost bifocals to progressives; advice must be affordable to be followed.",
+      "raw": "రెండు వేలు",
+      "value": "mid",
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "te",
+      "at": "2026-11-10T20:33:06.165Z"
+     }
+    ],
+    "skipped": [],
+    "startedAt": "2026-11-10T20:33:06.134Z",
+    "finishedAt": "2026-11-10T20:33:06.165Z",
+    "asked": 15,
+    "bank": 30,
+    "notAsked": [
+     "rf_sudden_which",
+     "rf_pain_severe",
+     "child_white",
+     "child_squint",
+     "glasses_type",
+     "glasses_years",
+     "glasses_ok",
+     "rx_known",
+     "frequent_change",
+     "screen_hours",
+     "outdoor_hours",
+     "child_board",
+     "parent_myopia",
+     "drives",
+     "falls"
+    ]
+   },
+   "measurements": {
+    "acuity": {
+     "distanceM": 2,
+     "R": {
+      "logmar": 0.4
+     },
+     "L": {
+      "logmar": 0.5,
+      "pinholeLogmar": 0.3,
+      "pinholeImproved": true
+     }
+    },
+    "amsler": {
+     "R": "normal",
+     "L": "normal"
+    }
+   },
+   "profile": {
+    "derived": {
+     "age": 59,
+     "isChild": false,
+     "occ": "driver",
+     "pseudophakic": false,
+     "presbyopeLikely": true,
+     "urgent": false,
+     "diabetic": true
+    },
+    "vision": {
+     "zones": {
+      "near": {
+       "hours": 1,
+       "share": 0.1,
+       "source": "reported",
+       "workingDistanceCm": 40,
+       "distanceSource": "typical for occupation",
+       "demandD": 2.5
+      },
+      "intermediate": {
+       "hours": 2,
+       "share": 0.2,
+       "source": "occupation",
+       "workingDistanceCm": 66,
+       "demandD": 1.5
+      },
+      "distance": {
+       "hours": 7,
+       "share": 0.7,
+       "source": "occupation"
+      }
+     },
+     "dominance": "distance",
+     "designEmphasis": "Balanced",
+     "inputsReported": 1,
+     "nearDistanceMeasured": false
+    },
+    "presbyopia": {
+     "status": "established",
+     "amplitudeD": 0.3,
+     "amplitudeSource": "age (Hofstetter minimum)",
+     "expectedAmplitudeD": {
+      "min": 0.3,
+      "avg": 0.8
+     },
+     "workingDistanceCm": 40,
+     "nearDemandD": 2.5,
+     "addD": 2.5,
+     "addRangeD": [
+      2.25,
+      2.75
+     ],
+     "intermediateAddD": 1.5,
+     "measuredNearPoint": false
+    },
+    "myopiaRisk": null,
+    "triage": {
+     "lane": "amber",
+     "flags": [
+      {
+       "lane": "amber",
+       "code": "DIABETES_RETINA_DUE",
+       "title": "Diabetic retina check overdue",
+       "detail": "6 years of diabetes; last dilated retina check: over a year ago.",
+       "ref": "diabetes",
+       "action": "Dilated fundus exam or retinal photo at the next camp or vision centre."
+      },
+      {
+       "lane": "amber",
+       "code": "CATARACT_SUSPECT",
+       "title": "Possible cataract",
+       "detail": "night glare or faded colours.",
+       "ref": "cataract",
+       "action": "Slit-lamp exam at the next camp or vision centre; cataract surgery restores sight better than new glasses."
+      }
+     ]
+    },
+    "recommendation": {
+     "category": "progressive",
+     "title": "Progressive lens, Balanced design",
+     "rationale": [
+      "Needs distance and near (70% far, 10% near, 20% arm’s length).",
+      "Estimated reading add about +2.50 D for 40 cm (age (Hofstetter minimum)). The optometrist confirms."
+     ],
+     "coatings": [
+      "Anti-reflective coating for night driving and glare",
+      "UV protection; photochromic lenses or sunglasses for long hours in the sun"
+     ],
+     "notes": [],
+     "centrationNeeded": true,
+     "example": "e.g. ZEISS SmartLife Progressive, Balanced design option",
+     "decisionPath": [
+      {
+       "rule": "Red-flag lane",
+       "passed": false,
+       "detail": "lane amber"
+      },
+      {
+       "rule": "Child under 16",
+       "passed": false,
+       "detail": "age 59"
+      },
+      {
+       "rule": "Needs a reading add",
+       "passed": true,
+       "detail": "add +2.50 D at 40 cm, status established"
+      },
+      {
+       "rule": "Fall at 65+ and active outdoors",
+       "passed": false,
+       "detail": "age 59, fall no, distance 70% of day"
+      },
+      {
+       "rule": "Mostly close work, little else (near ≥50%, others <25%, no distance complaint)",
+       "passed": false,
+       "detail": "near 10%, arm’s length 20%, distance 70%, distance complaint yes"
+      },
+      {
+       "rule": "Arm’s-length work dominates, or close + arm’s length ≥75%",
+       "passed": false,
+       "detail": "dominance distance, close + arm’s length 30%, distance 70%"
+      },
+      {
+       "rule": "Low budget, or already comfortable in bifocals",
+       "passed": false,
+       "detail": "budget mid, current glasses none"
+      },
+      {
+       "rule": "Otherwise: progressive with the profile’s design emphasis",
+       "passed": true,
+       "detail": "design Balanced"
+      }
+     ]
+    },
+    "advice": [
+     "diabetes_yearly",
+     "uv_sunglasses"
+    ],
+    "checks": [
+     "reading_distance",
+     "near_point",
+     "acuity",
+     "amsler",
+     "pd"
+    ],
+    "quality": {
+     "items": [
+      {
+       "key": "zones",
+       "label": "Daily hours reported by the patient",
+       "value": "1 of 3 (rest from occupation)",
+       "ok": false
+      },
+      {
+       "key": "nearDistance",
+       "label": "Near working distance",
+       "value": "typical for occupation (not measured)",
+       "ok": false
+      },
+      {
+       "key": "amplitude",
+       "label": "Focusing range",
+       "value": "age (Hofstetter minimum)",
+       "ok": false
+      },
+      {
+       "key": "acuity",
+       "label": "Eye-chart letter size",
+       "value": "screen not calibrated: sizes approximate",
+       "ok": false
+      },
+      {
+       "key": "answers",
+       "label": "Answers",
+       "value": "15 by voice, 0 by tap",
+       "ok": true
+      }
+     ],
+     "level": "low"
+    },
+    "rulesVersion": "2026.11-r2",
+    "summary": "59y · driver · distance-dominant · add ~+2.50 · Progressive lens, Balanced design"
+   },
+   "rulesVersion": "2026.11-r2",
+   "passport": {
+    "lang": "te",
+    "text": "దివ్యదృష్టి విజన్ పాస్‌పోర్ట్ · DD-2FA50B\nG. Ramulu · 11/11/2026\nమీ కళ్ళు ఎక్కువగా వాడేది: దూరపు చూపు (బయట, వాహనం నడపడం, ముఖాలు).\nసూచన: ప్రోగ్రెసివ్ కళ్ళజోడు (అన్ని దూరాలు, గీత లేకుండా) (add +2.50).\nఒక ఆప్టోమెట్రిస్ట్ ఒక రోజులో మీ ఫలితాలను చూసి, పూర్తి కంటి పరీక్ష ఎక్కడ, ఎప్పుడు చేయించుకోవాలో చెబుతారు.\nఇది కూడా అవసరం: షుగర్ వల్ల రెటీనా పరీక్ష; శుక్లం (కాటరాక్ట్) పరీక్ష.\nసలహాలు: షుగర్ ఉంటే, బాగా కనిపించినా సంవత్సరానికి ఒకసారి చుక్కల మందు వేసి రెటీనా పరీక్ష చేయించుకోండి. ఎండ ఎక్కువగా ఉన్నప్పుడు UV రక్షణ ఉన్న నల్ల కళ్ళజోడు లేదా వెడల్పాటి టోపీ పెట్టుకోండి.\nఈ సందేశాన్ని ఏ కళ్ళజోడు దుకాణంలోనైనా, కంటి శిబిరంలోనైనా చూపించండి."
+   }
+  },
+  "receivedMinutesAgo": 110
+ },
+ {
+  "case": {
+   "id": "63c4f51c-a450-43ac-a876-2700fba9daa0",
+   "createdAt": "2026-11-10T20:05:06.166Z",
+   "appVersion": "0.2.0",
+   "lang": "mr",
+   "demo": true,
+   "site": {
+    "name": "Patil Optics, Nashik",
+    "type": "store"
+   },
+   "operator": "Store owner (demo)",
+   "patient": {
+    "name": "Sunita Patil",
+    "phone": "+91 98220 00145",
+    "village": "Nashik 422001",
+    "age": 45,
+    "sex": "female"
+   },
+   "consent": {
+    "given": true,
+    "at": "2026-11-10T20:05:06.166Z",
+    "lang": "mr",
+    "textVersion": "consent-v1",
+    "method": "demo"
+   },
+   "interview": {
+    "answers": {
+     "age": 45,
+     "sex": "female",
+     "complaint": [
+      "strain",
+      "near_blur"
+     ],
+     "rf_sudden": false,
+     "rf_pain": false,
+     "conditions": [
+      "none"
+     ],
+     "glaucoma_family": false,
+     "eye_surgery": "none",
+     "glasses_now": true,
+     "glasses_type": "distance",
+     "glasses_years": 4,
+     "glasses_ok": "near_blur",
+     "rx_known": {
+      "R": {
+       "sph": -1,
+       "cyl": -0.5,
+       "axis": 90
+      },
+      "L": {
+       "sph": -1.25,
+       "cyl": 0
+      },
+      "text": "R −1.00 / −0.50 × 90   L −1.25",
+      "warnings": []
+     },
+     "frequent_change": false,
+     "occupation": "teacher",
+     "near_hours": 3,
+     "screen_hours": 2,
+     "outdoor_hours": 1,
+     "drives": true,
+     "night_glare": false,
+     "budget": "high"
+    },
+    "trace": [
+     {
+      "qid": "age",
+      "module": "core",
+      "question": "तुमचे वय किती आहे?",
+      "questionEn": "How old are you?",
+      "reason": "Age sets which eye changes to look for: myopia in children, presbyopia after 40, cataract after 50.",
+      "raw": "पंचेचाळीस",
+      "value": 45,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "mr",
+      "at": "2026-11-10T20:33:06.166Z"
+     },
+     {
+      "qid": "sex",
+      "module": "core",
+      "question": "तुम्ही स्त्री आहात की पुरुष?",
+      "questionEn": "Are you female or male?",
+      "reason": "Needed for the record; some conditions differ by sex (angle-closure glaucoma is more common in women).",
+      "raw": "स्त्री",
+      "value": "female",
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "mr",
+      "at": "2026-11-10T20:33:06.168Z"
+     },
+     {
+      "qid": "complaint",
+      "module": "core",
+      "question": "आज तुम्ही कशासाठी आला आहात? उदाहरणार्थ: दूरचे धूसर दिसणे, जवळचे धूसर दिसणे, डोकेदुखी किंवा डोळे थकणे, किंवा फक्त तपासणी.",
+      "questionEn": "What brings you here today? For example: blurry far away, blurry up close, headache or tired eyes, or just a check-up.",
+      "reason": "The main complaint decides which tests and follow-up questions matter.",
+      "raw": "जवळचे वाचायला त्रास होतो आणि डोके दुखते",
+      "value": [
+       "strain",
+       "near_blur"
+      ],
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "mr",
+      "at": "2026-11-10T20:33:06.173Z"
+     },
+     {
+      "qid": "rf_sudden",
+      "module": "redflag",
+      "question": "गेल्या काही आठवड्यांत तुमची दृष्टी अचानक कमी झाली का, किंवा प्रकाशाचे चमकणे, पडद्यासारखी काळी सावली, किंवा दोन-दोन दिसणे असे झाले का?",
+      "questionEn": "In the last few weeks, has your sight suddenly got worse, or have you seen flashes of light, a dark shadow like a curtain, or double vision?",
+      "reason": "Sudden loss, flashes, a curtain or new double vision can mean retinal detachment, a blocked vessel or a stroke: same-day referral.",
+      "raw": "नाही",
+      "value": false,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "mr",
+      "at": "2026-11-10T20:33:06.175Z"
+     },
+     {
+      "qid": "rf_pain",
+      "module": "redflag",
+      "question": "आत्ता डोळ्यात दुखणे, लालसरपणा, किंवा काही जखम आहे का?",
+      "questionEn": "Do you have eye pain, redness, or an eye injury right now?",
+      "reason": "A painful red eye or an injury needs a doctor, not new glasses.",
+      "raw": "नाही",
+      "value": false,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "mr",
+      "at": "2026-11-10T20:33:06.176Z"
+     },
+     {
+      "qid": "conditions",
+      "module": "medical",
+      "question": "तुम्हाला मधुमेह (शुगर), हाय बीपी, किंवा थायरॉइडचा त्रास आहे का?",
+      "questionEn": "Do you have diabetes, high blood pressure, or a thyroid problem?",
+      "reason": "Diabetes damages the retina silently and makes glasses power fluctuate; blood pressure and thyroid disease also affect the eyes.",
+      "raw": "काही नाही",
+      "value": [
+       "none"
+      ],
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "mr",
+      "at": "2026-11-10T20:33:06.177Z"
+     },
+     {
+      "qid": "glaucoma_family",
+      "module": "medical",
+      "question": "तुमच्या आई, वडील, भाऊ किंवा बहिणीला काचबिंदू (ग्लॉकोमा) आहे का?",
+      "questionEn": "Does your mother, father, brother or sister have glaucoma, the eye pressure disease?",
+      "reason": "Glaucoma runs in families and steals sight painlessly; relatives over 40 need an eye-pressure and optic-nerve check.",
+      "raw": "नाही",
+      "value": false,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "mr",
+      "at": "2026-11-10T20:33:06.178Z"
+     },
+     {
+      "qid": "eye_surgery",
+      "module": "medical",
+      "question": "तुमचे मोतीबिंदूचे ऑपरेशन किंवा डोळ्याचे दुसरे कोणते ऑपरेशन झाले आहे का?",
+      "questionEn": "Have you had cataract surgery, or any other eye operation?",
+      "reason": "After cataract surgery the eye cannot focus up close, so near glasses are needed whatever the age.",
+      "raw": "नाही",
+      "value": "none",
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "mr",
+      "at": "2026-11-10T20:33:06.179Z"
+     },
+     {
+      "qid": "glasses_now",
+      "module": "glasses",
+      "question": "तुम्ही सध्या चष्मा वापरता का?",
+      "questionEn": "Do you wear glasses now?",
+      "reason": "Current glasses show the past prescription and what is or isn’t working.",
+      "raw": "हो",
+      "value": true,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "mr",
+      "at": "2026-11-10T20:33:06.180Z"
+     },
+     {
+      "qid": "glasses_type",
+      "module": "glasses",
+      "question": "तो कोणत्या प्रकारचा आहे: दूरसाठी, वाचनासाठी, रेषा असलेला बायफोकल, की रेषा नसलेला प्रोग्रेसिव्ह?",
+      "questionEn": "What kind are they: for distance, for reading, bifocal with a line, or progressive with no line?",
+      "reason": "Tells us which zones the patient already relies on, and whether they have adapted to multifocals before.",
+      "raw": "दूरचा",
+      "value": "distance",
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "mr",
+      "at": "2026-11-10T20:33:06.183Z"
+     },
+     {
+      "qid": "glasses_years",
+      "module": "glasses",
+      "question": "तुमचा सध्याचा चष्मा किती वर्षे जुना आहे?",
+      "questionEn": "How old are your current glasses, in years?",
+      "reason": "Prescriptions older than about two years are often out of date, especially after 40.",
+      "raw": "चार वर्षे",
+      "value": 4,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "mr",
+      "at": "2026-11-10T20:33:06.183Z"
+     },
+     {
+      "qid": "glasses_ok",
+      "module": "glasses",
+      "question": "या चष्म्याने कसे दिसते: ठीक, दूरचे धूसर, जवळचे धूसर, की डोके दुखते?",
+      "questionEn": "With these glasses, how do you see: fine, blurry far away, blurry up close, or do they give you headaches?",
+      "reason": "Separates an outdated prescription from a wrong lens type or a poor fit.",
+      "raw": "जवळचे धूसर दिसते",
+      "value": "near_blur",
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "mr",
+      "at": "2026-11-10T20:33:06.186Z"
+     },
+     {
+      "qid": "rx_known",
+      "module": "glasses",
+      "question": "चष्म्याच्या नंबरची चिठ्ठी असल्यास ती वाचा. उदाहरण: right eye minus one point five, cylinder minus point five, axis ninety. नसल्यास skip म्हणा.",
+      "questionEn": "If you have the prescription slip, read it out. For example: right eye minus one point five, cylinder minus point five, axis ninety. Or say skip.",
+      "reason": "A known prescription is the best starting point; it is checked against valid lens steps and for big differences between the eyes.",
+      "raw": "right eye minus one cylinder minus point five axis ninety left eye minus one point two five",
+      "value": {
+       "R": {
+        "sph": -1,
+        "cyl": -0.5,
+        "axis": 90
+       },
+       "L": {
+        "sph": -1.25,
+        "cyl": 0
+       },
+       "text": "R −1.00 / −0.50 × 90   L −1.25",
+       "warnings": []
+      },
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "mr",
+      "at": "2026-11-10T20:33:06.187Z"
+     },
+     {
+      "qid": "frequent_change",
+      "module": "glasses",
+      "question": "गेल्या दोन वर्षांत नंबर बदलत राहिल्यामुळे एकापेक्षा जास्त वेळा नवीन चष्मा करावा लागला का?",
+      "questionEn": "In the last two years, have you needed new glasses more than once because the power kept changing?",
+      "reason": "Power that keeps changing can signal a developing cataract or uncontrolled diabetes.",
+      "raw": "नाही",
+      "value": false,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "mr",
+      "at": "2026-11-10T20:33:06.187Z"
+     },
+     {
+      "qid": "occupation",
+      "module": "lifestyle",
+      "question": "दिवसभरात तुम्ही बहुतेक कोणते काम करता? उदाहरणार्थ: शेती, शिवणकाम, गाडी चालवणे, दुकान, ऑफिस किंवा कॉम्प्युटरचे काम, घरकाम, किंवा शिक्षण.",
+      "questionEn": "What work do you do for most of the day? For example: farming, tailoring, driving, a shop, office or computer work, housework, or studies.",
+      "reason": "Work sets how many hours go to near, arm’s-length and far vision, the core of the vision profile.",
+      "raw": "मी शिक्षिका आहे",
+      "value": "teacher",
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "mr",
+      "at": "2026-11-10T20:33:06.199Z"
+     },
+     {
+      "qid": "near_hours",
+      "module": "lifestyle",
+      "question": "सामान्य दिवशी तुम्ही किती तास जवळचे काम करता: वाचन, फोन, शिवणकाम किंवा बारीक हातकाम?",
+      "questionEn": "On a normal day, how many hours do you spend on close work: reading, the phone, sewing or fine handwork?",
+      "reason": "From the late 30s, hours of close work decide the reading add and the lens type.",
+      "raw": "तीन तास",
+      "value": 3,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "mr",
+      "at": "2026-11-10T20:33:06.199Z"
+     },
+     {
+      "qid": "screen_hours",
+      "module": "lifestyle",
+      "question": "दिवसाला किती तास तुम्ही कॉम्प्युटर किंवा लॅपटॉपच्या स्क्रीनवर काम करता?",
+      "questionEn": "How many hours a day do you work on a computer or laptop screen?",
+      "reason": "Screens sit at arm’s length (\"intermediate\" vision), which standard bifocals do not cover and progressives cover narrowly.",
+      "raw": "दोन तास",
+      "value": 2,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "mr",
+      "at": "2026-11-10T20:33:06.199Z"
+     },
+     {
+      "qid": "outdoor_hours",
+      "module": "lifestyle",
+      "question": "दिवसाला किती तास तुम्ही बाहेर दिवसाच्या उजेडात असता?",
+      "questionEn": "How many hours a day are you outdoors in daylight?",
+      "reason": "Long hours in sunlight call for UV protection and possibly photochromic lenses.",
+      "raw": "एक तास",
+      "value": 1,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "mr",
+      "at": "2026-11-10T20:33:06.199Z"
+     },
+     {
+      "qid": "drives",
+      "module": "lifestyle",
+      "question": "तुम्ही गाडी किंवा दुचाकी चालवता का?",
+      "questionEn": "Do you drive a vehicle or ride a two-wheeler?",
+      "reason": "Driving needs sharp distance vision and wide side vision; it changes lens design and coating advice.",
+      "raw": "हो स्कूटर चालवते",
+      "value": true,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "mr",
+      "at": "2026-11-10T20:33:06.200Z"
+     },
+     {
+      "qid": "night_glare",
+      "module": "lifestyle",
+      "question": "रात्री गाड्यांच्या दिव्यांमुळे किंवा रस्त्यावरच्या दिव्यांमुळे डोळे दिपतात का, किंवा रंग फिके दिसतात का?",
+      "questionEn": "At night, do headlights or street lights dazzle you, or do colours look dull and faded?",
+      "reason": "Night glare for a driver calls for an anti-reflective coating.",
+      "raw": "नाही",
+      "value": false,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "mr",
+      "at": "2026-11-10T20:33:06.200Z"
+     },
+     {
+      "qid": "budget",
+      "module": "preference",
+      "question": "लेन्सवर किती खर्च करायचा आहे: एक हजार रुपयांपेक्षा कमी, एक ते तीन हजार, की तीन हजारांपेक्षा जास्त?",
+      "questionEn": "How much would you like to spend on the lenses: under one thousand rupees, one to three thousand, or more than three thousand?",
+      "reason": "Lens options for near-and-far needs range from low-cost bifocals to progressives; advice must be affordable to be followed.",
+      "raw": "तीन हजारांपेक्षा जास्त",
+      "value": "high",
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "mr",
+      "at": "2026-11-10T20:33:06.202Z"
+     }
+    ],
+    "skipped": [],
+    "startedAt": "2026-11-10T20:33:06.166Z",
+    "finishedAt": "2026-11-10T20:33:06.202Z",
+    "asked": 21,
+    "bank": 30,
+    "notAsked": [
+     "rf_sudden_which",
+     "rf_pain_severe",
+     "child_white",
+     "child_squint",
+     "diabetes_years",
+     "retina_exam",
+     "child_board",
+     "parent_myopia",
+     "falls"
+    ]
+   },
+   "measurements": {
+    "readingDistanceCm": 38,
+    "nearPointCm": 40,
+    "acuity": {
+     "distanceM": 2,
+     "R": {
+      "logmar": 0.1
+     },
+     "L": {
+      "logmar": 0.1
+     }
+    },
+    "pd": {
+     "binocularMm": 61.5,
+     "rightMm": 30.5,
+     "leftMm": 31,
+     "nearMm": 58,
+     "method": "iris"
+    }
+   },
+   "profile": {
+    "derived": {
+     "age": 45,
+     "isChild": false,
+     "occ": "teacher",
+     "pseudophakic": false,
+     "presbyopeLikely": true,
+     "urgent": false,
+     "diabetic": false
+    },
+    "vision": {
+     "zones": {
+      "near": {
+       "hours": 3,
+       "share": 0.375,
+       "source": "reported",
+       "workingDistanceCm": 38,
+       "distanceSource": "measured",
+       "demandD": 2.75
+      },
+      "intermediate": {
+       "hours": 3,
+       "share": 0.375,
+       "source": "reported",
+       "workingDistanceCm": 66,
+       "demandD": 1.5
+      },
+      "distance": {
+       "hours": 2,
+       "share": 0.25,
+       "source": "reported"
+      }
+     },
+     "dominance": "balanced",
+     "designEmphasis": "Balanced",
+     "inputsReported": 3,
+     "nearDistanceMeasured": true
+    },
+    "presbyopia": {
+     "status": "established",
+     "amplitudeD": 2.5,
+     "amplitudeSource": "measured near point",
+     "expectedAmplitudeD": {
+      "min": 3.8,
+      "avg": 5
+     },
+     "workingDistanceCm": 38,
+     "nearDemandD": 2.75,
+     "addD": 1.5,
+     "addRangeD": [
+      1.25,
+      1.75
+     ],
+     "intermediateAddD": 0.25,
+     "measuredNearPoint": true
+    },
+    "myopiaRisk": null,
+    "triage": {
+     "lane": "green",
+     "flags": []
+    },
+    "recommendation": {
+     "category": "progressive",
+     "title": "Progressive lens, Balanced design",
+     "rationale": [
+      "Needs distance and near (25% far, 38% near, 38% arm’s length).",
+      "Estimated reading add about +1.50 D for 38 cm (measured near point). The optometrist confirms."
+     ],
+     "coatings": [
+      "Anti-reflective coating for night driving and glare"
+     ],
+     "notes": [
+      "Blue-light filter: optional, not a treatment. A Cochrane review of 17 trials (2023) found it probably makes no difference to eye strain, sleep or retinal health, and no harm. What relieves screen strain: the right power at screen distance (for this patient, an intermediate add for the screen distance), an anti-reflective coating, blinking and 20-20-20 breaks."
+     ],
+     "centrationNeeded": true,
+     "example": "e.g. ZEISS SmartLife Progressive, Balanced design option",
+     "decisionPath": [
+      {
+       "rule": "Red-flag lane",
+       "passed": false,
+       "detail": "lane green"
+      },
+      {
+       "rule": "Child under 16",
+       "passed": false,
+       "detail": "age 45"
+      },
+      {
+       "rule": "Needs a reading add",
+       "passed": true,
+       "detail": "add +1.50 D at 38 cm, status established"
+      },
+      {
+       "rule": "Fall at 65+ and active outdoors",
+       "passed": false,
+       "detail": "age 45, fall no, distance 25% of day"
+      },
+      {
+       "rule": "Mostly close work, little else (near ≥50%, others <25%, no distance complaint)",
+       "passed": false,
+       "detail": "near 38%, arm’s length 38%, distance 25%, distance complaint yes"
+      },
+      {
+       "rule": "Arm’s-length work dominates, or close + arm’s length ≥75%",
+       "passed": false,
+       "detail": "dominance balanced, close + arm’s length 75%, distance 25%"
+      },
+      {
+       "rule": "Low budget, or already comfortable in bifocals",
+       "passed": false,
+       "detail": "budget high, current glasses distance"
+      },
+      {
+       "rule": "Otherwise: progressive with the profile’s design emphasis",
+       "passed": true,
+       "detail": "design Balanced"
+      }
+     ]
+    },
+    "advice": [
+     "rule_20_20_20",
+     "good_light"
+    ],
+    "checks": [
+     "reading_distance",
+     "near_point",
+     "acuity",
+     "pd"
+    ],
+    "quality": {
+     "items": [
+      {
+       "key": "zones",
+       "label": "Daily hours reported by the patient",
+       "value": "3 of 3 (rest from occupation)",
+       "ok": true
+      },
+      {
+       "key": "nearDistance",
+       "label": "Near working distance",
+       "value": "measured, uncalibrated camera (±15%)",
+       "ok": true
+      },
+      {
+       "key": "amplitude",
+       "label": "Focusing range",
+       "value": "measured near point",
+       "ok": true
+      },
+      {
+       "key": "acuity",
+       "label": "Eye-chart letter size",
+       "value": "screen not calibrated: sizes approximate",
+       "ok": false
+      },
+      {
+       "key": "pd",
+       "label": "Pupillary distance",
+       "value": "iris",
+       "ok": true
+      },
+      {
+       "key": "answers",
+       "label": "Answers",
+       "value": "21 by voice, 0 by tap",
+       "ok": true
+      }
+     ],
+     "level": "high"
+    },
+    "rulesVersion": "2026.11-r2",
+    "summary": "45y · teacher · balanced · add ~+1.50 · Progressive lens, Balanced design"
+   },
+   "rulesVersion": "2026.11-r2",
+   "passport": {
+    "lang": "mr",
+    "text": "दिव्यदृष्टी व्हिजन पासपोर्ट · DD-63C4F5\nSunita Patil · 11/11/2026\nतुमचे डोळे बहुतेक वापरले जातात: जवळ, हाताचे अंतर आणि दूर, तिन्हींचे मिश्रण.\nसूचना: प्रोग्रेसिव्ह चष्मा (सर्व अंतरे, रेषेशिवाय) (add +1.50).\nRx: R −1.00 / −0.50 × 90   L −1.25\nएक ऑप्टोमेट्रिस्ट हे निकाल तपासून तुमचा चष्मा निश्चित करतील.\nसल्ला: दर 20 मिनिटांच्या जवळच्या कामानंतर किंवा स्क्रीननंतर, 20 सेकंद 6 मीटर दूर पहा. वाचन, शिवणकाम यांसारख्या जवळच्या कामासाठी चांगला प्रकाश ठेवा.\nहा संदेश कोणत्याही चष्म्याच्या दुकानात किंवा नेत्र शिबिरात दाखवा."
+   }
+  },
+  "receivedMinutesAgo": 20
+ },
+ {
+  "case": {
+   "id": "bcb6b3fa-181f-4c89-a42b-bb5c5ac5e105",
+   "createdAt": "2026-11-10T19:20:06.203Z",
+   "appVersion": "0.2.0",
+   "lang": "kn",
+   "demo": true,
+   "site": {
+    "name": "Eye camp, Bommanahalli",
+    "type": "camp"
+   },
+   "operator": "Camp volunteer (demo)",
+   "patient": {
+    "name": "S. Manjula",
+    "phone": "+91 99000 00512",
+    "village": "Bommanahalli, Bengaluru 560068",
+    "age": 52,
+    "sex": "female"
+   },
+   "consent": {
+    "given": true,
+    "at": "2026-11-10T19:20:06.203Z",
+    "lang": "kn",
+    "textVersion": "consent-v1",
+    "method": "demo"
+   },
+   "interview": {
+    "answers": {
+     "age": 52,
+     "sex": "female",
+     "complaint": [
+      "near_blur"
+     ],
+     "rf_sudden": false,
+     "rf_pain": false,
+     "conditions": [
+      "bp"
+     ],
+     "glaucoma_family": true,
+     "eye_surgery": "none",
+     "glasses_now": true,
+     "glasses_type": "reading",
+     "glasses_years": 2,
+     "glasses_ok": "near_blur",
+     "rx_known": {
+      "skipped": true
+     },
+     "frequent_change": false,
+     "occupation": "tailor",
+     "near_hours": 8,
+     "outdoor_hours": 0.5,
+     "drives": false,
+     "night_glare": false,
+     "budget": "low"
+    },
+    "trace": [
+     {
+      "qid": "age",
+      "module": "core",
+      "question": "ನಿಮ್ಮ ವಯಸ್ಸು ಎಷ್ಟು?",
+      "questionEn": "How old are you?",
+      "reason": "Age sets which eye changes to look for: myopia in children, presbyopia after 40, cataract after 50.",
+      "raw": "ಐವತ್ತೆರಡು",
+      "value": 52,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "kn",
+      "at": "2026-11-10T20:33:06.203Z"
+     },
+     {
+      "qid": "sex",
+      "module": "core",
+      "question": "ನೀವು ಮಹಿಳೆಯೇ ಅಥವಾ ಪುರುಷರೇ?",
+      "questionEn": "Are you female or male?",
+      "reason": "Needed for the record; some conditions differ by sex (angle-closure glaucoma is more common in women).",
+      "raw": "ಹೆಂಗಸು",
+      "value": "female",
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "kn",
+      "at": "2026-11-10T20:33:06.204Z"
+     },
+     {
+      "qid": "complaint",
+      "module": "core",
+      "question": "ಇಂದು ಯಾಕೆ ಬಂದಿದ್ದೀರಿ? ಉದಾಹರಣೆಗೆ: ದೂರ ಮಸುಕಾಗಿ ಕಾಣುವುದು, ಹತ್ತಿರ ಮಸುಕಾಗಿ ಕಾಣುವುದು, ತಲೆನೋವು ಅಥವಾ ಕಣ್ಣಿನ ಆಯಾಸ, ಅಥವಾ ಸಾಮಾನ್ಯ ಪರೀಕ್ಷೆ.",
+      "questionEn": "What brings you here today? For example: blurry far away, blurry up close, headache or tired eyes, or just a check-up.",
+      "reason": "The main complaint decides which tests and follow-up questions matter.",
+      "raw": "ಹತ್ತಿರ ಓದಲು ಕಷ್ಟ",
+      "value": [
+       "near_blur"
+      ],
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "kn",
+      "at": "2026-11-10T20:33:06.210Z"
+     },
+     {
+      "qid": "rf_sudden",
+      "module": "redflag",
+      "question": "ಕಳೆದ ಕೆಲವು ವಾರಗಳಲ್ಲಿ ನಿಮ್ಮ ದೃಷ್ಟಿ ಹಠಾತ್ತನೆ ಕಡಿಮೆಯಾಯಿತೇ, ಅಥವಾ ಬೆಳಕಿನ ಮಿಂಚು, ಪರದೆಯಂತಹ ಕಪ್ಪು ನೆರಳು, ಅಥವಾ ಎರಡಾಗಿ ಕಾಣುವುದು ಆಯಿತೇ?",
+      "questionEn": "In the last few weeks, has your sight suddenly got worse, or have you seen flashes of light, a dark shadow like a curtain, or double vision?",
+      "reason": "Sudden loss, flashes, a curtain or new double vision can mean retinal detachment, a blocked vessel or a stroke: same-day referral.",
+      "raw": "ಇಲ್ಲ",
+      "value": false,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "kn",
+      "at": "2026-11-10T20:33:06.213Z"
+     },
+     {
+      "qid": "rf_pain",
+      "module": "redflag",
+      "question": "ಈಗ ಕಣ್ಣಿನಲ್ಲಿ ನೋವು, ಕೆಂಪು, ಅಥವಾ ಯಾವುದಾದರೂ ಗಾಯ ಇದೆಯೇ?",
+      "questionEn": "Do you have eye pain, redness, or an eye injury right now?",
+      "reason": "A painful red eye or an injury needs a doctor, not new glasses.",
+      "raw": "ಇಲ್ಲ",
+      "value": false,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "kn",
+      "at": "2026-11-10T20:33:06.214Z"
+     },
+     {
+      "qid": "conditions",
+      "module": "medical",
+      "question": "ನಿಮಗೆ ಸಕ್ಕರೆ ಕಾಯಿಲೆ (ಶುಗರ್), ಬಿಪಿ, ಅಥವಾ ಥೈರಾಯ್ಡ್ ಸಮಸ್ಯೆ ಇದೆಯೇ?",
+      "questionEn": "Do you have diabetes, high blood pressure, or a thyroid problem?",
+      "reason": "Diabetes damages the retina silently and makes glasses power fluctuate; blood pressure and thyroid disease also affect the eyes.",
+      "raw": "ಬಿಪಿ ಇದೆ",
+      "value": [
+       "bp"
+      ],
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "kn",
+      "at": "2026-11-10T20:33:06.216Z"
+     },
+     {
+      "qid": "glaucoma_family",
+      "module": "medical",
+      "question": "ನಿಮ್ಮ ಅಮ್ಮ, ಅಪ್ಪ, ಸಹೋದರ ಅಥವಾ ಸಹೋದರಿಗೆ ಗ್ಲಾಕೋಮಾ (ಕಣ್ಣಿನ ಒತ್ತಡದ ಕಾಯಿಲೆ) ಇದೆಯೇ?",
+      "questionEn": "Does your mother, father, brother or sister have glaucoma, the eye pressure disease?",
+      "reason": "Glaucoma runs in families and steals sight painlessly; relatives over 40 need an eye-pressure and optic-nerve check.",
+      "raw": "ಹೌದು ಅಮ್ಮನಿಗೆ ಇದೆ",
+      "value": true,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "kn",
+      "at": "2026-11-10T20:33:06.217Z"
+     },
+     {
+      "qid": "eye_surgery",
+      "module": "medical",
+      "question": "ನಿಮಗೆ ಕಣ್ಣಿನ ಪೊರೆ (ಕ್ಯಾಟರಾಕ್ಟ್) ಶಸ್ತ್ರಚಿಕಿತ್ಸೆ ಅಥವಾ ಬೇರೆ ಯಾವುದಾದರೂ ಕಣ್ಣಿನ ಶಸ್ತ್ರಚಿಕಿತ್ಸೆ ಆಗಿದೆಯೇ?",
+      "questionEn": "Have you had cataract surgery, or any other eye operation?",
+      "reason": "After cataract surgery the eye cannot focus up close, so near glasses are needed whatever the age.",
+      "raw": "ಇಲ್ಲ",
+      "value": "none",
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "kn",
+      "at": "2026-11-10T20:33:06.218Z"
+     },
+     {
+      "qid": "glasses_now",
+      "module": "glasses",
+      "question": "ನೀವು ಈಗ ಕನ್ನಡಕ ಧರಿಸುತ್ತೀರಾ?",
+      "questionEn": "Do you wear glasses now?",
+      "reason": "Current glasses show the past prescription and what is or isn’t working.",
+      "raw": "ಹೌದು",
+      "value": true,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "kn",
+      "at": "2026-11-10T20:33:06.219Z"
+     },
+     {
+      "qid": "glasses_type",
+      "module": "glasses",
+      "question": "ಅದು ಯಾವ ರೀತಿಯದು: ದೂರಕ್ಕೆ, ಓದಲು, ಗೆರೆ ಇರುವ ಬೈಫೋಕಲ್, ಅಥವಾ ಗೆರೆ ಇಲ್ಲದ ಪ್ರೋಗ್ರೆಸಿವ್?",
+      "questionEn": "What kind are they: for distance, for reading, bifocal with a line, or progressive with no line?",
+      "reason": "Tells us which zones the patient already relies on, and whether they have adapted to multifocals before.",
+      "raw": "ಓದಲು",
+      "value": "reading",
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "kn",
+      "at": "2026-11-10T20:33:06.222Z"
+     },
+     {
+      "qid": "glasses_years",
+      "module": "glasses",
+      "question": "ನಿಮ್ಮ ಈಗಿನ ಕನ್ನಡಕ ಎಷ್ಟು ವರ್ಷ ಹಳೆಯದು?",
+      "questionEn": "How old are your current glasses, in years?",
+      "reason": "Prescriptions older than about two years are often out of date, especially after 40.",
+      "raw": "ಎರಡು ವರ್ಷ",
+      "value": 2,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "kn",
+      "at": "2026-11-10T20:33:06.223Z"
+     },
+     {
+      "qid": "glasses_ok",
+      "module": "glasses",
+      "question": "ಈ ಕನ್ನಡಕದಿಂದ ಹೇಗೆ ಕಾಣುತ್ತದೆ: ಚೆನ್ನಾಗಿ, ದೂರ ಮಸುಕು, ಹತ್ತಿರ ಮಸುಕು, ಅಥವಾ ತಲೆನೋವು ಬರುತ್ತದೆಯೇ?",
+      "questionEn": "With these glasses, how do you see: fine, blurry far away, blurry up close, or do they give you headaches?",
+      "reason": "Separates an outdated prescription from a wrong lens type or a poor fit.",
+      "raw": "ಹತ್ತಿರ ಮಸುಕು",
+      "value": "near_blur",
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "kn",
+      "at": "2026-11-10T20:33:06.225Z"
+     },
+     {
+      "qid": "rx_known",
+      "module": "glasses",
+      "question": "ಕನ್ನಡಕದ ಪವರ್ ಚೀಟಿ ಇದ್ದರೆ, ಅದನ್ನು ಓದಿ. ಉದಾಹರಣೆ: right eye minus one point five, cylinder minus point five, axis ninety. ಇಲ್ಲದಿದ್ದರೆ skip ಎಂದು ಹೇಳಿ.",
+      "questionEn": "If you have the prescription slip, read it out. For example: right eye minus one point five, cylinder minus point five, axis ninety. Or say skip.",
+      "reason": "A known prescription is the best starting point; it is checked against valid lens steps and for big differences between the eyes.",
+      "raw": "skip",
+      "value": {
+       "skipped": true
+      },
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "kn",
+      "at": "2026-11-10T20:33:06.225Z"
+     },
+     {
+      "qid": "frequent_change",
+      "module": "glasses",
+      "question": "ಕಳೆದ ಎರಡು ವರ್ಷಗಳಲ್ಲಿ ಪವರ್ ಬದಲಾಗುತ್ತಲೇ ಇದ್ದುದರಿಂದ ಒಂದಕ್ಕಿಂತ ಹೆಚ್ಚು ಬಾರಿ ಹೊಸ ಕನ್ನಡಕ ಬೇಕಾಯಿತೇ?",
+      "questionEn": "In the last two years, have you needed new glasses more than once because the power kept changing?",
+      "reason": "Power that keeps changing can signal a developing cataract or uncontrolled diabetes.",
+      "raw": "ಇಲ್ಲ",
+      "value": false,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "kn",
+      "at": "2026-11-10T20:33:06.225Z"
+     },
+     {
+      "qid": "occupation",
+      "module": "lifestyle",
+      "question": "ದಿನದ ಹೆಚ್ಚಿನ ಸಮಯ ಯಾವ ಕೆಲಸ ಮಾಡುತ್ತೀರಿ? ಉದಾಹರಣೆಗೆ: ಕೃಷಿ, ಹೊಲಿಗೆ, ವಾಹನ ಚಾಲನೆ, ಅಂಗಡಿ, ಕಚೇರಿ ಅಥವಾ ಕಂಪ್ಯೂಟರ್ ಕೆಲಸ, ಮನೆಗೆಲಸ, ಅಥವಾ ಓದು.",
+      "questionEn": "What work do you do for most of the day? For example: farming, tailoring, driving, a shop, office or computer work, housework, or studies.",
+      "reason": "Work sets how many hours go to near, arm’s-length and far vision, the core of the vision profile.",
+      "raw": "ಹೊಲಿಗೆ ಕೆಲಸ",
+      "value": "tailor",
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "kn",
+      "at": "2026-11-10T20:33:06.240Z"
+     },
+     {
+      "qid": "near_hours",
+      "module": "lifestyle",
+      "question": "ಸಾಮಾನ್ಯ ದಿನದಲ್ಲಿ ಎಷ್ಟು ಗಂಟೆ ಹತ್ತಿರದ ಕೆಲಸ ಮಾಡುತ್ತೀರಿ: ಓದುವುದು, ಫೋನ್, ಹೊಲಿಗೆ ಅಥವಾ ಸೂಕ್ಷ್ಮ ಕೈಕೆಲಸ?",
+      "questionEn": "On a normal day, how many hours do you spend on close work: reading, the phone, sewing or fine handwork?",
+      "reason": "From the late 30s, hours of close work decide the reading add and the lens type.",
+      "raw": "ಎಂಟು ಗಂಟೆ",
+      "value": 8,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "kn",
+      "at": "2026-11-10T20:33:06.240Z"
+     },
+     {
+      "qid": "outdoor_hours",
+      "module": "lifestyle",
+      "question": "ದಿನಕ್ಕೆ ಎಷ್ಟು ಗಂಟೆ ಹೊರಗೆ ಹಗಲು ಬೆಳಕಿನಲ್ಲಿ ಇರುತ್ತೀರಿ?",
+      "questionEn": "How many hours a day are you outdoors in daylight?",
+      "reason": "Long hours in sunlight call for UV protection and possibly photochromic lenses.",
+      "raw": "ಅರ್ಧ ಗಂಟೆ",
+      "value": 0.5,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "kn",
+      "at": "2026-11-10T20:33:06.240Z"
+     },
+     {
+      "qid": "drives",
+      "module": "lifestyle",
+      "question": "ನೀವು ವಾಹನ ಅಥವಾ ದ್ವಿಚಕ್ರ ವಾಹನ ಓಡಿಸುತ್ತೀರಾ?",
+      "questionEn": "Do you drive a vehicle or ride a two-wheeler?",
+      "reason": "Driving needs sharp distance vision and wide side vision; it changes lens design and coating advice.",
+      "raw": "ಇಲ್ಲ",
+      "value": false,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "kn",
+      "at": "2026-11-10T20:33:06.241Z"
+     },
+     {
+      "qid": "night_glare",
+      "module": "lifestyle",
+      "question": "ರಾತ್ರಿ ವಾಹನಗಳ ಲೈಟ್ ಅಥವಾ ಬೀದಿ ದೀಪಗಳು ಕಣ್ಣು ಕುಕ್ಕುತ್ತವೆಯೇ, ಅಥವಾ ಬಣ್ಣಗಳು ಮಾಸಿದಂತೆ ಕಾಣುತ್ತವೆಯೇ?",
+      "questionEn": "At night, do headlights or street lights dazzle you, or do colours look dull and faded?",
+      "reason": "Glare and faded colours after 50 are early cataract signs.",
+      "raw": "ಇಲ್ಲ",
+      "value": false,
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "kn",
+      "at": "2026-11-10T20:33:06.241Z"
+     },
+     {
+      "qid": "budget",
+      "module": "preference",
+      "question": "ಲೆನ್ಸ್‌ಗಳಿಗೆ ಎಷ್ಟು ಖರ್ಚು ಮಾಡಲು ಬಯಸುತ್ತೀರಿ: ಸಾವಿರ ರೂಪಾಯಿಗಿಂತ ಕಡಿಮೆ, ಸಾವಿರದಿಂದ ಮೂರು ಸಾವಿರ, ಅಥವಾ ಮೂರು ಸಾವಿರಕ್ಕಿಂತ ಹೆಚ್ಚು?",
+      "questionEn": "How much would you like to spend on the lenses: under one thousand rupees, one to three thousand, or more than three thousand?",
+      "reason": "Lens options for near-and-far needs range from low-cost bifocals to progressives; advice must be affordable to be followed.",
+      "raw": "ಸಾವಿರ ರೂಪಾಯಿಗಿಂತ ಕಡಿಮೆ",
+      "value": "low",
+      "mode": "voice",
+      "confidence": null,
+      "lowConfidence": false,
+      "lang": "kn",
+      "at": "2026-11-10T20:33:06.243Z"
+     }
+    ],
+    "skipped": [],
+    "startedAt": "2026-11-10T20:33:06.203Z",
+    "finishedAt": "2026-11-10T20:33:06.243Z",
+    "asked": 20,
+    "bank": 30,
+    "notAsked": [
+     "rf_sudden_which",
+     "rf_pain_severe",
+     "child_white",
+     "child_squint",
+     "diabetes_years",
+     "retina_exam",
+     "screen_hours",
+     "child_board",
+     "parent_myopia",
+     "falls"
+    ]
+   },
+   "measurements": {
+    "readingDistanceCm": 27,
+    "acuity": {
+     "distanceM": 2,
+     "R": {
+      "logmar": 0.1
+     },
+     "L": {
+      "logmar": 0.1
+     }
+    },
+    "amsler": {
+     "R": "normal",
+     "L": "normal"
+    }
+   },
+   "profile": {
+    "derived": {
+     "age": 52,
+     "isChild": false,
+     "occ": "tailor",
+     "pseudophakic": false,
+     "presbyopeLikely": true,
+     "urgent": false,
+     "diabetic": false
+    },
+    "vision": {
+     "zones": {
+      "near": {
+       "hours": 8,
+       "share": 0.8,
+       "source": "reported",
+       "workingDistanceCm": 27,
+       "distanceSource": "measured",
+       "demandD": 3.75
+      },
+      "intermediate": {
+       "hours": 1,
+       "share": 0.1,
+       "source": "occupation",
+       "workingDistanceCm": 66,
+       "demandD": 1.5
+      },
+      "distance": {
+       "hours": 1,
+       "share": 0.1,
+       "source": "reported"
+      }
+     },
+     "dominance": "near",
+     "designEmphasis": "Near",
+     "inputsReported": 2,
+     "nearDistanceMeasured": true
+    },
+    "presbyopia": {
+     "status": "established",
+     "amplitudeD": 2,
+     "amplitudeSource": "age (Hofstetter minimum)",
+     "expectedAmplitudeD": {
+      "min": 2,
+      "avg": 2.9
+     },
+     "workingDistanceCm": 27,
+     "nearDemandD": 3.75,
+     "addD": 2.75,
+     "addRangeD": [
+      2.5,
+      3
+     ],
+     "intermediateAddD": 0.5,
+     "measuredNearPoint": false
+    },
+    "myopiaRisk": null,
+    "triage": {
+     "lane": "amber",
+     "flags": [
+      {
+       "lane": "amber",
+       "code": "GLAUCOMA_FAMILY",
+       "title": "Family history of glaucoma, age 40+",
+       "detail": "First-degree relatives have a markedly higher risk; glaucoma is painless until late.",
+       "ref": "glaucoma",
+       "action": "Eye pressure and optic-nerve check."
+      }
+     ]
+    },
+    "recommendation": {
+     "category": "readers",
+     "title": "Reading glasses at 27 cm",
+     "rationale": [
+      "Mostly close work (80% of the day) and no distance complaint.",
+      "Estimated reading add about +2.75 D for 27 cm (age (Hofstetter minimum)). The optometrist confirms."
+     ],
+     "coatings": [],
+     "notes": [
+      "If both eyes see well far away and there is no astigmatism complaint, ready-made readers are a low-cost option once the optometrist approves the add."
+     ],
+     "centrationNeeded": false,
+     "example": null,
+     "decisionPath": [
+      {
+       "rule": "Red-flag lane",
+       "passed": false,
+       "detail": "lane amber"
+      },
+      {
+       "rule": "Child under 16",
+       "passed": false,
+       "detail": "age 52"
+      },
+      {
+       "rule": "Needs a reading add",
+       "passed": true,
+       "detail": "add +2.75 D at 27 cm, status established"
+      },
+      {
+       "rule": "Fall at 65+ and active outdoors",
+       "passed": false,
+       "detail": "age 52, fall no, distance 10% of day"
+      },
+      {
+       "rule": "Mostly close work, little else (near ≥50%, others <25%, no distance complaint)",
+       "passed": true,
+       "detail": "near 80%, arm’s length 10%, distance 10%, distance complaint no"
+      }
+     ]
+    },
+    "advice": [
+     "rule_20_20_20",
+     "good_light",
+     "family_check"
+    ],
+    "checks": [
+     "reading_distance",
+     "near_point",
+     "acuity",
+     "amsler",
+     "pd"
+    ],
+    "quality": {
+     "items": [
+      {
+       "key": "zones",
+       "label": "Daily hours reported by the patient",
+       "value": "2 of 3 (rest from occupation)",
+       "ok": true
+      },
+      {
+       "key": "nearDistance",
+       "label": "Near working distance",
+       "value": "measured, uncalibrated camera (±15%)",
+       "ok": true
+      },
+      {
+       "key": "amplitude",
+       "label": "Focusing range",
+       "value": "age (Hofstetter minimum)",
+       "ok": false
+      },
+      {
+       "key": "acuity",
+       "label": "Eye-chart letter size",
+       "value": "screen not calibrated: sizes approximate",
+       "ok": false
+      },
+      {
+       "key": "answers",
+       "label": "Answers",
+       "value": "20 by voice, 0 by tap",
+       "ok": true
+      }
+     ],
+     "level": "medium"
+    },
+    "rulesVersion": "2026.11-r2",
+    "summary": "52y · tailor · near-dominant · add ~+2.75 · Reading glasses at 27 cm"
+   },
+   "rulesVersion": "2026.11-r2",
+   "passport": {
+    "lang": "kn",
+    "text": "ದಿವ್ಯದೃಷ್ಟಿ ವಿಷನ್ ಪಾಸ್‌ಪೋರ್ಟ್ · DD-BCB6B3\nS. Manjula · 11/11/2026\nನಿಮ್ಮ ಕಣ್ಣುಗಳನ್ನು ಹೆಚ್ಚಾಗಿ ಬಳಸುವುದು: ಹತ್ತಿರದ ಕೆಲಸ (ಓದುವುದು, ಫೋನ್, ಹೊಲಿಗೆ).\nಸಲಹೆ: ಓದುವ ಕನ್ನಡಕ (add +2.75).\nಒಬ್ಬ ಆಪ್ಟೋಮೆಟ್ರಿಸ್ಟ್ ಒಂದು ದಿನದೊಳಗೆ ನಿಮ್ಮ ಫಲಿತಾಂಶಗಳನ್ನು ನೋಡಿ, ಪೂರ್ಣ ಕಣ್ಣಿನ ಪರೀಕ್ಷೆ ಎಲ್ಲಿ, ಯಾವಾಗ ಎಂದು ತಿಳಿಸುತ್ತಾರೆ.\nಇದೂ ಅಗತ್ಯ: ಕಣ್ಣಿನ ಒತ್ತಡ (ಗ್ಲಾಕೋಮಾ) ಪರೀಕ್ಷೆ.\nಸಲಹೆಗಳು: ಪ್ರತಿ 20 ನಿಮಿಷ ಹತ್ತಿರದ ಕೆಲಸ ಅಥವಾ ಸ್ಕ್ರೀನ್ ನಂತರ, 20 ಸೆಕೆಂಡು 6 ಮೀಟರ್ ದೂರ ನೋಡಿ. ಓದುವುದು, ಹೊಲಿಗೆಯಂತಹ ಹತ್ತಿರದ ಕೆಲಸಕ್ಕೆ ಒಳ್ಳೆಯ ಬೆಳಕು ಇಟ್ಟುಕೊಳ್ಳಿ.\nಈ ಸಂದೇಶವನ್ನು ಯಾವುದೇ ಕನ್ನಡಕದ ಅಂಗಡಿ ಅಥವಾ ಕಣ್ಣಿನ ಶಿಬಿರದಲ್ಲಿ ತೋರಿಸಿ."
+   }
+  },
+  "receivedMinutesAgo": 65
+ }
+]
